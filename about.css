@@ -1,0 +1,62 @@
+p, h1, h2, h3, ul, li{
+    color:white;
+}
+
+.about-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 60px;
+    margin-top:40px;
+}
+
+.card {
+    width: 300px;
+    height: 250px;
+
+    background: rgba(255,255,255, 0.1);
+    color: white;
+
+    border-radius: 15px;
+    padding: 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.card ul {
+    max-width: 230px;
+    text-align: left;
+    line-height: 1.8;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("frisbee\ background.jpg");
+    background-size: cover;       /* Makes image cover the entire page */
+    background-repeat: no-repeat; /* Prevents image from repeating */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed; /* Optional: keeps image fixed when scrolling */
+}
+
+footer {
+    justify-content:center;
+    background: rgba(0,0,0, 0.5);
+    padding: 10px;
+}
+
+.social-media {
+    display: flex;
+    align-items: stretch;
+}
+
+.social-media a {
+  text-decoration: none; /* Removes the blue/purple lines */
+  margin-right: 10px;
+}
