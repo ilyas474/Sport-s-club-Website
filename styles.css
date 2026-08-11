@@ -93,3 +93,27 @@ summary{
     margin-top: 15px;
     line-height: 1.6;
 }
+
+.header table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header td {
+    padding: 10px;
+    width: 60%;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+.NavigationBar a {
+   color: white;
+   text-decoration-color: white;
+}
+
+.NavigationBar {
+    text-align: center;
+}
