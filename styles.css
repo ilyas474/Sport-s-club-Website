@@ -109,6 +109,10 @@ summary{
     height: 80px;
 }
 
+.header h1 {
+    text-align: center;
+}
+
 .NavigationBar a {
    color: white;
    text-decoration-color: white;
