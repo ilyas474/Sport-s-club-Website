@@ -19,6 +19,7 @@
                 </tr>
             </table>
         </div>
+        <hr>
           <div class="NavigationBar">
         <nav>
             <a href="home.html">Home</a> &emsp;
@@ -28,25 +29,50 @@
     </div>
         <hr>
     </header>
-       <div id="Registration">
+    <div id="Registration">
     <h1>Registration</h1>
         <h3> Please fill in all the details required</h3>
-    <form action="Submit-Registration.html" method="post">
+    <form action="Submit-Registration.html" method="get">
         <label><b>Full Name:</b></label>
-        <input type="text" id="full_name" name="full_name" required placeholder="Enter your full name"><br><br>
+        <input type="text" id="Full_Name" name="full_name" required placeholder="Enter your full name"
+        oninvalid="this.setCustomValidity('Please enter your full name')"
+        oninput="this.setCustomValidity('')"><br><br>
 
         <label><b>Student ID:</b></label>
-        <input type="text" id="student_id" name="student_id" required placeholder="TPXXXXXX"><br><br>
-        
-        <label for="Phone Contact:"><b>Phone/Contact Number</b></label>
-        <input type="tel" id="phone_contact" name="phone_contact" required placeholder="(+XXX) XX XXXX-XXXX"><br><br>
+        <input type="text" id="Student_ID" name="student_id" required placeholder="TPXXXXXX"
+        oninvalid="this.setCustomValidity('Please enter your student ID')"
+        oninput="this.setCustomValidity('')"><br><br>
+
+        <label><b>Phone/Contact Number:</b></label>
+        <input type="tel" id="Phone_Contact" name="phone_contact" required placeholder="(+XXX) XX XXXX-XXXX"
+        oninvalid="this.setCustomValidity('Please enter your phone number')"
+        oninput="this.setCustomValidity('')"><br><br>
 
         <label><b>Date of Birth:</b></label>
-        <input type="date" id="Date" name="Date of Birth" required><br><br>
+        <input type="date" id="Date_of_Birth" name="Date of Birth" required><br><br>
 
-        <input type="submit" value="Register">  
-        <input type="reset" value="Clear">
-    
+        <label><b>Gender:</b></label>
+        <select id="gender" name="gender" required
+        oninvalid="this.setCustomValidity('Please select your gender')" 
+        oninput="this.setCustomValidity('')">
+            <option value="" disabled selected>-- Select Gender --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <label><b>Experience Level:</b></label>
+        <select id="experience" name="experience" required
+        oninvalid="this.setCustomValidity('Please select your experience level')" 
+        oninput="this.setCustomValidity('')">
+            <option value="" disabled selected>-- Select Experience Level --</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+        </select><br><br>
+
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
     </form>
     </div>
     <hr>
