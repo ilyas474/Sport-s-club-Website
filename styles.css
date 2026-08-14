@@ -61,6 +61,7 @@ footer {
   margin-right: 10px;
 }
 
+/* FAQ Section Styles */
 summary{
     color:white;
 }
@@ -177,6 +178,7 @@ button:hover {
     margin: 0 auto;         /* centers the paragraph */
 }
 
+/* Enquiry Form Styles */
 .enquiry-container {
     width:600px;
     margin: 0 auto;
