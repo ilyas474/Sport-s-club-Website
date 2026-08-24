@@ -112,7 +112,7 @@ summary{
 
 .NavigationBar a {
    color: white;
-   text-decoration-color: white;
+   text-decoration: none;
 }
 
 .NavigationBar {
@@ -198,3 +198,4 @@ button:hover {
 
     box-sizing: border-box;
 }
+
