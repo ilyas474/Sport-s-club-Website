@@ -138,7 +138,7 @@ summary{
 }
 
 button {
-    background-color: #1E90FF; /* Dodger Blue */
+    background-color: #1E90FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -148,33 +148,32 @@ button {
 }
 
 button:hover {
-    background-color: #32CD32; /* Lime Green when hovering */
+    background-color: #32CD32;
 }
 
 #Submit-Registration {
-    min-height: 80vh;       /* makes the content area tall enough */
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centers the success message vertically */
+    justify-content: center;
     text-align: center;
 }
 
 #Submit-Registration + footer {
-    margin-top: auto;       /* pushes footer to bottom only on this page */
+    margin-top: auto;
 }
 
 #Submit-Registration h1 {
-    font-size: 68px;        /* bigger heading */
-    color: #00BFFF;         /* bright sporty blue */
+    font-size: 68px;
+    color: #00BFFF;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
-   
-    margin-top: -10px;              /* removes default top margin */
+    margin-top: -10px;
 }
 
 #Submit-Registration p {
-    font-size: 22px;        /* larger paragraph text */
-    line-height: 1.6;       /* more readable spacing */
-    color: #ffffff;         /* keep it clean white */
-    max-width: 700px;       /* keeps text nicely contained */
-    margin: 0 auto;         /* centers the paragraph */
+    font-size: 22px;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
 }
