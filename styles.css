@@ -110,15 +110,6 @@ summary{
     height: 80px;
 }
 
-.NavigationBar a {
-   color: white;
-   text-decoration: none;
-}
-
-.NavigationBar {
-    text-align: center;
-}
-
 #Registration {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -226,3 +217,12 @@ button:hover {
     margin-right: auto;
     margin-top:20px;
 }
+
+.NavigationBar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
