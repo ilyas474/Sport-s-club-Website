@@ -226,3 +226,41 @@ button:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+nav a:hover {
+    color:red;
+}
+
+nav a:hover::after{
+    width:70%
+}
+
+nav a.active{
+    color:red;
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:red;
+    font-weight:500;
+    font-size:0.85rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0;
+    padding:18px 14px;
+    position:relative;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:3px;
+    background:red;
+    border-radius:3px 3px 0 0;
+    transition: width 0.25s ease;
+}
