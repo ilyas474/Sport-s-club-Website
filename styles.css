@@ -2,6 +2,11 @@ b, p, h1, h2, h3, ul, li{
     color:white;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
 .about-cards {
     display: flex;
     flex-direction: row;
@@ -35,10 +40,41 @@ b, p, h1, h2, h3, ul, li{
     max-width: 230px;
     text-align: left;
     line-height: 1.8;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.card-text{
+    margin-top:-15px;
+}
+
+#h1_about{
+    color: #FF4500;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.card h2{
+    color: yellow;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#h2_cv{
+    color: yellow;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#h2_join_us{
+    color: yellow;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#introduction{
+    color: yellow;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("frisbee\ background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
     background-repeat: no-repeat;
     background-position: center;
@@ -188,6 +224,14 @@ button:hover {
     box-sizing: border-box;
 }
 
+#enquiryForm button {
+    padding: 8px 20px;
+}
+
+#makeAnotherEnquiry button {
+    padding: 100px 200px;
+}
+
 #Submit-Enquiry {
     min-height: 80vh;
     display: flex;
@@ -243,7 +287,7 @@ nav a{
     text-decoration:none;
     color:red;
     font-weight:500;
-    font-size:0.85rem;
+    font-size:0.5rem;
     letter-spacing:0.04em;
     text-transform:uppercase;
     margin:0;
@@ -263,4 +307,48 @@ nav a::after {
     background:red;
     border-radius:3px 3px 0 0;
     transition: width 0.25s ease;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    text-decoration: none;
+    color: #ffffff; 
+    font-family: inherit;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111111;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 100%; 
+    left: 0;
+    border: 1px solid #333333;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #333333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
