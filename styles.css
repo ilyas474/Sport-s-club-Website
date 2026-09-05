@@ -20,8 +20,8 @@ p {
     width: 300px;
     height: 250px;
 
-    background: rgba(255,255,255, 0.1);
     color: white;
+    background: rgba(0,0,128, 0.5);
 
     border-radius: 15px;
     padding: 25px;
@@ -74,7 +74,7 @@ p {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("Images/frisbee\ background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
     background-repeat: no-repeat;
     background-position: center;
@@ -114,13 +114,15 @@ summary{
 }
 
 .faq details {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 128, 0.5);
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 18px 20px;
 }
 
 .faq summary {
+    color:white; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -208,7 +210,7 @@ button:hover {
 .enquiry-container {
     width:600px;
     margin: 0 auto;
-    background: rgba(255,255,255, 0.1);
+    background: rgba(0,0,0, 0.5);
     color: white;
 
     border-radius: 15px;
