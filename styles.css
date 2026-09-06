@@ -74,17 +74,136 @@ p {
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("Images/frisbee\ background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
 
-footer {
-    justify-content:center;
-    background: rgba(0,0,0, 0.5);
-    padding: 10px;
+.site-footer {
+    background-color: #002200;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 20px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3, 
+.footer-column h4 {
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color: #b3cbb3;
+    line-height: 1.6;
+}
+
+.contact-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e0eee0;
+    margin-bottom: 15px;
+}
+
+.phone-link {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.phone-link:hover {
+    color: #4caf50;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #e0eee0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: padding-left 0.2s, color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-socials {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-socials p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #b3cbb3;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    font-size: 0.85rem;
+    color: #88a888;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
 }
 
 .social-media {
@@ -97,7 +216,6 @@ footer {
   margin-right: 10px;
 }
 
-/* FAQ Section Styles */
 summary{
     color:white;
 }
@@ -166,7 +284,7 @@ summary{
 }
 
 button {
-    background-color: #1E90FF; /* Dodger Blue */
+    background-color: #1E90FF;
     color: white;
     border: none;
     padding: 10px 20px;
