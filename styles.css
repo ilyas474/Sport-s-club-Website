@@ -26,7 +26,7 @@ p {
     height: 250px;
 
     color: white;
-    background: rgba(0,0,128, 0.5);
+    background: #0B3D2E;
 
     border-radius: 15px;
     padding: 25px;
@@ -82,8 +82,8 @@ body {
 }
 
 .site-footer {
-    background-color: #e1d9d1;
-    color: black;
+    background-color: #001e50;
+    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 60px 20px 20px 20px;
 }
@@ -99,7 +99,7 @@ body {
 
 .footer-column h3, 
 .footer-column h4 {
-    color: black;
+    color: white;
     margin-top: 0;
     margin-bottom: 20px;
     font-size: 1.2rem;
@@ -113,24 +113,23 @@ body {
 
 .tagline {
     font-size: 0.95rem;
-    color:black;
+    color:white;
     line-height: 1.6;
 }
 
 .contact-text {
     font-size: 0.9rem;
     line-height: 1.6;
-    color: black;
+    color: white;
     margin-bottom: 15px;
 }
 
 .phone-link {
-    color: black;
+    color:white;
     text-decoration: none;
 }
 
 .phone-link:hover{
-    color:blue;
     text-decoration:underline;
 }
 
@@ -145,14 +144,14 @@ body {
 }
 
 .footer-links a {
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 0.95rem;
     transition: padding-left 0.2s, color 0.2s;
 }
 
 .footer-links a:hover {
-    color: black;
+    color: white;
     padding-left: 5px;
 }
 
@@ -166,7 +165,7 @@ body {
 .footer-socials p {
     font-size: 0.95rem;
     margin-bottom: 15px;
-    color: black;
+    color: white;
 }
 
 .social-icons {
@@ -186,26 +185,6 @@ body {
     transform: translateY(-3px);
 }
 
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    padding-top: 20px;
-    font-size: 0.85rem;
-    color: black;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .footer-links a:hover {
-        padding-left: 0;
-    }
-}
-
 .social-media {
     display: flex;
     align-items: stretch;
@@ -222,7 +201,7 @@ summary{
 
 .faq-title{
     text-align:center; 
-    color: #FF4500; 
+    color: #4EFECE; 
     text-shadow: 2px 2px 6px rgba(0,0,0,2);
 }
 .faq {
@@ -237,7 +216,7 @@ summary{
 }
 
 .faq details {
-    background: rgba(0, 0, 128, 0.5);
+    background: #002D32;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 18px 20px;
@@ -333,7 +312,7 @@ button:hover {
 .enquiry-container {
     width:600px;
     margin: 0 auto;
-    background: rgba(0,0,128, 0.5);
+    background:#2C2C2C;
     color: white;
 
     border-radius: 15px;
@@ -347,6 +326,22 @@ button:hover {
     align-items: center;
 
     box-sizing: border-box;
+}
+
+#enquiry-title{
+    text-align:center; 
+    color:#38BDF8; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#enquiry-h2{
+    text-align:center;
+}
+
+#enquiry-form-title{
+    text-align:center; 
+    color: yellow; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 #enquiryForm button {
