@@ -252,6 +252,30 @@ summary{
     height: 80px;
 }
 
+#Registration form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#Registration form input,
+#Registration form select {
+    display: block;
+    width: 300px;
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto 25px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#Registration form br {
+    display: none;
+}
+
+#Registration form button {
+    margin: 5px;
+}
+
 #Registration {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -267,6 +291,14 @@ summary{
    color: #FF4500;
     text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
     font-size: 40px;
+}
+#Registration form input::placeholder {
+    text-align: center;
+}
+
+#Registration form input,
+#Registration form select {
+    text-align: center;
 }
 
 button {
