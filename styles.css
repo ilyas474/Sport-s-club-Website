@@ -2,6 +2,15 @@ b, p, h1, h2, h3, ul, li{
     color:white;
 }
 
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#logo{
+    margin-bottom:-30px;
+}
+
 .about-cards {
     display: flex;
     flex-direction: row;
@@ -12,22 +21,19 @@ b, p, h1, h2, h3, ul, li{
 }
 
 .card {
+    margin-bottom:10px;
     width: 300px;
     height: 250px;
 
-    background: rgba(255,255,255, 0.1);
     color: white;
+    background: #0B3D2E;
 
     border-radius: 15px;
     padding: 25px;
 
     text-align: center;
-
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
     box-sizing: border-box;
 }
 
@@ -35,20 +41,148 @@ b, p, h1, h2, h3, ul, li{
     max-width: 230px;
     text-align: left;
     line-height: 1.8;
+    margin-top: 0;
+}
+
+.card-text{
+    margin-top:-15px;
+}
+
+.about-content h1{
+    color:red;
+    text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+    text-align:center;
+}
+
+.about-content h2{
+    color:yellow;
+    text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+    text-align:center;
+}
+
+.about-content ul{
+    font-size:18px;
+}
+
+.about-content p{
+    text-align:center;
+}
+
+.about-content button{
+    color:white; 
+    text-decoration:none;
 }
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("frisbee\ background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
 }
 
-footer {
-    justify-content:center;
-    background: rgba(0,0,0, 0.5);
-    padding: 10px;
+.site-footer {
+    background-color: #001e50;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 60px 20px 20px 20px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3, 
+.footer-column h4 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+}
+
+.footer-column h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color:white;
+    line-height: 1.6;
+}
+
+.contact-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.phone-link {
+    color:white;
+    text-decoration: none;
+}
+
+.phone-link:hover{
+    text-decoration:underline;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: padding-left 0.2s, color 0.2s;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-socials {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-socials p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: translateY(-3px);
 }
 
 .social-media {
@@ -61,11 +195,15 @@ footer {
   margin-right: 10px;
 }
 
-/* FAQ Section Styles */
 summary{
     color:white;
 }
 
+.faq-title{
+    text-align:center; 
+    color:red; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,2);
+}
 .faq {
     max-width: 800px;
     margin: 50px auto;
@@ -78,13 +216,15 @@ summary{
 }
 
 .faq details {
-    background: rgba(255, 255, 255, 0.1);
+    background:#4A777A;
     margin-bottom: 15px;
     border-radius: 10px;
     padding: 18px 20px;
 }
 
 .faq summary {
+    color:white; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
@@ -110,15 +250,6 @@ summary{
     height: 80px;
 }
 
-.NavigationBar a {
-   color: white;
-   text-decoration: none;
-}
-
-.NavigationBar {
-    text-align: center;
-}
-
 #Registration {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
@@ -137,7 +268,7 @@ summary{
 }
 
 button {
-    background-color: #1E90FF; /* Dodger Blue */
+    background-color: #1E90FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -181,7 +312,7 @@ button:hover {
 .enquiry-container {
     width:600px;
     margin: 0 auto;
-    background: rgba(255,255,255, 0.1);
+    background:#2C2C2C;
     color: white;
 
     border-radius: 15px;
@@ -197,6 +328,150 @@ button:hover {
     box-sizing: border-box;
 }
 
+#enquiry-title{
+    text-align:center; 
+    color:red; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#enquiry-h2{
+    text-align:center;
+}
+
+#enquiry-form-title{
+    text-align:center; 
+    color: yellow; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+}
+
+#enquiryForm button {
+    padding: 8px 20px;
+}
+
+#makeAnotherEnquiry button {
+    padding: 100px 200px;
+}
+
+#Submit-Enquiry {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#Submit-Enquiry h1 {
+    font-size: 68px;
+    color: #00BFFF;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    margin-top: -10px;
+}
+
+#Submit-Enquiry p {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#Submit-Enquiry button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:20px;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    color:red;
+}
+
+nav a:hover::after{
+    width:70%
+}
+
+nav a.active{
+    color:red;
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:red;
+    font-weight:500;
+    font-size:0.5rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0;
+    padding:18px 14px;
+    position:relative;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:3px;
+    background:red;
+    border-radius:3px 3px 0 0;
+    transition: width 0.25s ease;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-trigger {
+    text-decoration: none;
+    color: #ffffff; 
+    font-family: inherit;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111111;
+    min-width: 220px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    top: 100%; 
+    left: 0;
+    border: 1px solid #333333;
+}
+
+.dropdown-content a {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #333333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 .Sponsors {
     width: 600px;
     margin: 0 auto;
