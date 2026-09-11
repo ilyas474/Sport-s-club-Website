@@ -197,3 +197,63 @@ button:hover {
     box-sizing: border-box;
 }
 
+.Sponsors {
+    width: 600px;
+    margin: 0 auto;
+    background: rgba(255,255,255, 0.1);
+    color: white;
+
+    border-radius: 15px;
+    padding: 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+.partners {
+  text-align: center;
+  background-color: #111;
+  padding: 40px 20px;
+  color: white;
+}
+
+.partners h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.logo-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+}
+
+.logo-grid li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-grid a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.logo-grid img {
+  max-height: 80px;
+  max-width: 100%;
+}
+
+.logo-grid a:hover {
+  transform: scale(1.1); /* hover zoom effect */
+}
