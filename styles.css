@@ -659,79 +659,79 @@ nav a::after {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.Sponsors {
-    width: 600px;
-    margin: 0 auto;
-    background: rgba(255,255,255, 0.1);
-    color: white;
-
-    border-radius: 15px;
-    padding: 25px;
-
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    box-sizing: border-box;
-}
 
 .partners {
-  text-align: center;
-  background-color: #111;
-  padding: 40px 20px;
-  color: white;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .partners h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+    color: #ffd54f;
+    font-size: 34px;
+    margin: 0 0 20px;
 }
 
-.logo-grid {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px;
-  align-items: center;
-}
-
-.logo-grid li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo-grid a {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.logo-grid img {
-  max-height: 80px;
-  max-width: 100%;
-}
-
-.logo-grid a:hover {
-  transform: scale(1.1); /* hover zoom effect */
+.partners .logo-grid + h2 {
+    margin-top: 45px;
 }
 
 .partners .logo-grid {
     list-style: none;
     padding: 0;
-    margin: 0 0 25px;
+    margin: 0 auto;
+    max-width: 1260px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.partners .logo-grid li {
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 150px;
+    gap: 18px;
+    min-height: 180px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #202020;
+    border: 1px solid #333;
+    border-radius: 10px;
 }
 
 .partners .logo-grid img {
-    width: 120px;
-    height: 100px;
+    display: block;
+    width: 140px;
+    height: 140px;
     object-fit: contain;
+}
+
+.partners .logo-grid .logo_text strong {
+    font-size: 20px;
+}
+
+.partners .logo-grid a {
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.partners .logo-grid a:hover {
+    transform: scale(1.08);
+}
+
+.sponsor-contact {
+    max-width: 1260px;
+    margin: 50px auto 0;
+    padding: 24px 28px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    background-color: #202020;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.sponsor-contact a {
+    color: #ffd54f;
 }
