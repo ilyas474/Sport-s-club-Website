@@ -566,3 +566,19 @@ nav a::after {
 .logo-grid a:hover {
   transform: scale(1.1); /* hover zoom effect */
 }
+
+.partners .logo-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+
+.partners .logo-grid img {
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+}
