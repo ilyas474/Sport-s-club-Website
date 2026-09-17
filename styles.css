@@ -92,6 +92,63 @@ p {
     border-radius: 8px;
 }
 
+#core_values_container {
+    position: relative;
+    width: 100%;
+}
+
+#core_values {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+#core_values img {
+    width: 480px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.scroll_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003d66;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.scroll_btn.left {
+    left: 10px;
+}
+
+.scroll_btn.right {
+    right: 10px;
+}
+
+#core_values_container:hover .scroll_btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll_btn:hover {
+    background-color: #e91e63;
+}
+
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
@@ -111,9 +168,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding-bottom: 40px;
+    grid-template-columns: 1.7fr 0.8fr 1.2fr 1.2fr; 
+    gap: 30px;
+    padding-bottom:0px;
+}
+
+.footer-column-brand-info {
+    margin-left:-100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.footer-column-brand-info img {
+    width: 160px; 
+    height: 160px; 
+    margin-top: -100px;
+    margin-bottom: -100px;
+    vertical-align: middle;
 }
 
 .footer-column h3, 
@@ -131,6 +205,8 @@ body {
 }
 
 .tagline {
+    margin-top:25px;
+    margin-left:25px;
     font-size: 0.95rem;
     color:white;
     line-height: 1.6;
@@ -174,23 +250,10 @@ body {
     padding-left: 5px;
 }
 
-.footer-socials {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    margin-bottom: 20px;
-}
-
-.footer-socials p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    color: white;
-}
-
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction:column;
+    margin-bottom:50px;
 }
 
 .social-icons img {
@@ -204,14 +267,15 @@ body {
     transform: translateY(-3px);
 }
 
-.social-media {
+.social-icons a{
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
-.social-media a {
-  text-decoration: none;
-  margin-right: 10px;
+.social-icons p{
+    font-size:1rem;
 }
 
 summary{
@@ -497,7 +561,6 @@ button:hover {
         width: 100%;
     }
 }
-
 
 .card-content {
     padding: 15px;
