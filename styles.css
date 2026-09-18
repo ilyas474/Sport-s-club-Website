@@ -774,7 +774,8 @@ nav a::after {
     display: inline-block;
     margin-top: 20px;
     color: #ffd54f;
-  
+}
+
 .logo-grid a:hover {
   transform: scale(1.1);
 }
