@@ -659,17 +659,17 @@ nav a::after {
 }
 
 .logo-grid a:hover {
-  transform: scale(1.1); /* hover zoom effect */
+  transform: scale(1.1);
 }
 
 .Welcome h1 {
     text-align: center;
     text-decoration: underline;
-    color: red;
+    color: green;
 }
 
 .Welcome b {
-    color: red;
+    color: green;
 }
 
 .Box1 {
@@ -677,8 +677,9 @@ nav a::after {
     flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    gap: 35px;
-    margin: auto;
+    gap: 20px;
+    margin: 0;
+    text-align: center;
 }
 
 .Box1Image {
@@ -696,9 +697,84 @@ nav a::after {
     flex: 1;
     max-width: 600px;
     padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
 }
 
 .Box1Text p {
-    text-align: left;
-    margin: 0
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+}
+
+.SiteList {
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.Panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CardItem img {
+    height: 350px;
+    width: 450px;
+}
+
+.SiteList .CardItem {
+    list-style: none;
+}
+
+.SiteList .CardItem .CardLink {
+    width: 600px;
+    display: block;
+    background: #1B4332;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.SiteList .CardItem .CardLink:hover {
+    border-color: black;
+}
+
+.SiteList .CardLink .cardImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.HomeCard {
+    margin-bottom:10px;
+    width: 300px;
+    height: 320px;
+    color: white;
+    background: #1B4332;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.CardTitle {
+    margin: 16px;
+    font-size: 32px;
+}
+
+.card-button {
+    border-radius: 50%;
+    border: solid #ffffff;
+    background-color: rgb(32, 123, 14);
+}
+
+.CardLink:hover .card-button {
+    background: rgb(23, 87, 11);
 }
