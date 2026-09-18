@@ -92,6 +92,63 @@ p {
     border-radius: 8px;
 }
 
+#core_values_container {
+    position: relative;
+    width: 100%;
+}
+
+#core_values {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+#core_values img {
+    width: 480px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.scroll_btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #003d66;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+}
+
+.scroll_btn.left {
+    left: 10px;
+}
+
+.scroll_btn.right {
+    right: 10px;
+}
+
+#core_values_container:hover .scroll_btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll_btn:hover {
+    background-color: #e91e63;
+}
+
 body {
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
     background-size: cover;   
@@ -111,9 +168,26 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    padding-bottom: 40px;
+    grid-template-columns: 1.7fr 0.8fr 1.2fr 1.2fr; 
+    gap: 30px;
+    padding-bottom:0px;
+}
+
+.footer-column-brand-info {
+    margin-left:-100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.footer-column-brand-info img {
+    width: 160px; 
+    height: 160px; 
+    margin-top: -100px;
+    margin-bottom: -100px;
+    vertical-align: middle;
 }
 
 .footer-column h3, 
@@ -131,6 +205,8 @@ body {
 }
 
 .tagline {
+    margin-top:25px;
+    margin-left:25px;
     font-size: 0.95rem;
     color:white;
     line-height: 1.6;
@@ -174,23 +250,10 @@ body {
     padding-left: 5px;
 }
 
-.footer-socials {
-    text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 30px;
-    margin-bottom: 20px;
-}
-
-.footer-socials p {
-    font-size: 0.95rem;
-    margin-bottom: 15px;
-    color: white;
-}
-
 .social-icons {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction:column;
+    margin-bottom:50px;
 }
 
 .social-icons img {
@@ -204,14 +267,15 @@ body {
     transform: translateY(-3px);
 }
 
-.social-media {
+.social-icons a{
     display: flex;
-    align-items: stretch;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
 }
 
-.social-media a {
-  text-decoration: none;
-  margin-right: 10px;
+.social-icons p{
+    font-size:1rem;
 }
 
 summary{
@@ -498,7 +562,6 @@ button:hover {
     }
 }
 
-
 .card-content {
     padding: 15px;
     display: flex;
@@ -601,63 +664,117 @@ nav a::after {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.Sponsors {
-    width: 600px;
-    margin: 0 auto;
-    background: rgba(255,255,255, 0.1);
-    color: white;
-
-    border-radius: 15px;
-    padding: 25px;
-
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    box-sizing: border-box;
-}
 
 .partners {
-  text-align: center;
-  background-color: #111;
-  padding: 40px 20px;
-  color: white;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
 }
 
 .partners h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+    color: #ffd54f;
+    font-size: 34px;
+    margin: 0 0 20px;
 }
 
-.logo-grid {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px;
-  align-items: center;
+.partners .logo-grid + h2 {
+    margin-top: 45px;
 }
 
-.logo-grid li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.partners .logo-grid {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1260px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
 }
 
-.logo-grid a {
-  display: inline-block;
-  transition: transform 0.3s ease;
+.partners .logo-grid li {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 180px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #202020;
+    border: 1px solid #333;
+    border-radius: 10px;
 }
 
-.logo-grid img {
-  max-height: 80px;
-  max-width: 100%;
+.partners .logo-grid img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
 }
 
+.partners .logo-grid .logo_text strong {
+    font-size: 20px;
+}
+
+.partners .logo-grid a {
+    display: block;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.partners .logo-grid a:hover {
+    transform: scale(1.08);
+}
+
+.sponsor-contact {
+    max-width: 1260px;
+    margin: 50px auto 0;
+    padding: 24px 28px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 20px;
+    background-color: #202020;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.sponsor-contact a {
+    color: #ffd54f;
+}
+
+.recent-tournaments {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 45px 20px 60px;
+    text-align: center;
+}
+
+.recent-tournaments h1 {
+    color: #ffd54f;
+    font-size: 34px;
+    margin: 0 0 8px;
+}
+
+.recent-tournaments p {
+    margin: 0 0 24px;
+}
+
+.results-frame {
+    overflow: hidden;
+    border: 1px solid #444;
+    border-radius: 12px;
+}
+.results-frame iframe {
+    display: block;
+    width: 100%;
+    height: 560px;
+    border: 0;
+}
+
+.full-results {
+    display: inline-block;
+    margin-top: 20px;
+    color: #ffd54f;
+  
 .logo-grid a:hover {
   transform: scale(1.1);
 }
