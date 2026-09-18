@@ -575,6 +575,11 @@ button:hover {
     font-size: 18px;
     padding: 10px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    
+}
+
+nav {
+    text-align: center;
 }
 
 nav a:hover {
@@ -758,7 +763,6 @@ nav a::after {
     border: 1px solid #444;
     border-radius: 12px;
 }
-
 .results-frame iframe {
     display: block;
     width: 100%;
@@ -770,4 +774,124 @@ nav a::after {
     display: inline-block;
     margin-top: 20px;
     color: #ffd54f;
+  
+.logo-grid a:hover {
+  transform: scale(1.1);
+}
+
+.Welcome h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: green;
+}
+
+.Welcome b {
+    color: green;
+}
+
+.Box1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    text-align: center;
+}
+
+.Box1Image {
+    flex: 0 0 50%;
+    border-radius: 20px;
+    height: 350px;
+    max-width: 550px;
+}
+
+.Box1Image img {
+    width: 100%;
+}
+
+.Box1Text {
+    flex: 1;
+    max-width: 600px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.Box1Text p {
+    text-align: center;
+    margin: 0;
+    margin-top: 0;
+}
+
+.SiteList {
+    margin: 0;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.Panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.CardItem img {
+    height: 350px;
+    width: 450px;
+}
+
+.SiteList .CardItem {
+    list-style: none;
+}
+
+.SiteList .CardItem .CardLink {
+    width: 600px;
+    display: block;
+    background: #1B4332;
+    padding: 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.SiteList .CardItem .CardLink:hover {
+    border-color: black;
+}
+
+.SiteList .CardLink .cardImage {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.HomeCard {
+    margin-bottom:10px;
+    width: 300px;
+    height: 320px;
+    color: white;
+    background: #1B4332;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.CardTitle {
+    margin: 16px;
+    font-size: 32px;
+}
+
+.card-button {
+    border-radius: 50%;
+    border: solid #ffffff;
+    background-color: rgb(32, 123, 14);
+}
+
+.CardLink:hover .card-button {
+    background: rgb(23, 87, 11);
 }
