@@ -14,24 +14,29 @@ function submitForm(event) {
 }
 
 function searchNews() {
-    let searchText = document.getElementById("searchBar").value.toLowerCase();
+    let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");
     let searchResult = document.getElementById("searchResult");
-
-    if (searchText.trim() !== "") {
-        searchResult.textContent = 'Showing search results for "' + searchText + '":';
-    } else {
-        searchResult.textContent = "";
-    }
+    let foundResults = false;
 
     newsCards.forEach(function(card) {
         let content = card.textContent.toLowerCase();
 
-        if (content.includes(searchText)) {
+        if (content.includes(searchText.toLowerCase())) {
             card.style.display = "";
+            foundResults = true;
         } else {
             card.style.display = "none";
-            searchResult.textContent = 'No search results found for "' + searchText + '"';
         }
     });
+
+    if (searchText !== "") {
+        if (foundResults) {
+            searchResult.textContent = 'Showing results for "' + searchText + '":';
+        } else {
+            searchResult.textContent = 'No search results found for "' + searchText + '":';
+        }
+    } else {
+        searchResult.textContent = "";
+    }
 }
