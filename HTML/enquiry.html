@@ -6,6 +6,7 @@
     <title>Enquiries</title>
     <link rel="icon" href="../Images/club_logo.png">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js"></script>
 </head>
 <body>
     <header>
@@ -47,7 +48,7 @@
     </h2>
     <div class="enquiry-container" style="text-align:center;">
         <h1 id="enquiry-form-title">Make an Enquiry</h1>
-        <form id="enquiryForm" action="../Submit-Enquiry.html" method="get">
+        <form onsubmit="submitForm(event)">
             <label>Full Name:</label><br><br>
             <input type="text" id="name" name="name"
                    placeholder="Enter your full name" required 
