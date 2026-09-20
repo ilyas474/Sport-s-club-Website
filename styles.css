@@ -802,11 +802,12 @@ nav a::after {
 .Welcome h1 {
     text-align: center;
     text-decoration: underline;
-    color: green;
+    color:limegreen; 
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
 .Welcome b {
-    color: green;
+    color: limegreen;
 }
 
 .Box1 {
