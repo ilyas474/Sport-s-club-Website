@@ -795,6 +795,18 @@ nav a::after {
     color: #ffd54f;
 }
 
+.tournament-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 14px 0 30px;
+}
+
+.tournament-buttons button {
+    min-width: 210px;
+    padding: 12px 22px;
+}
+
 .logo-grid a:hover {
   transform: scale(1.1);
 }

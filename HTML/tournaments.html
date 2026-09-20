@@ -30,7 +30,7 @@
                 <div class="dropdown-content">
                     <a href="news_and_media.html">News and Media</a>
                     <a href="calendar_and_events.html">Calendar and Events</a>
-                    <a href="recent_tournaments.html">Tournaments</a>
+                    <a href="tournaments.html>Tournaments</a>
                     <a href="achievements.html">Achievements</a>
                 </div>
             </div>
@@ -41,21 +41,37 @@
     </div>
     <hr>
 <main class="recent-tournaments">
-    <h1>WUCC 2026 Results</h1>
-    <p>Games, scores, and standings from WFDF</p>
+    <h1 id="tournament-title">WUCC 2026 Results</h1>
+
+
+    <p id="tournament-description">
+    Games, scores, and standings from WFDF
+    </p>
+
+    <div class="tournament-buttons">
+        <button type="button" onclick="showRecent()">
+        Recent Tournament
+        </button>
+
+        <button type="button" onclick="showUpcoming()">
+            Upcoming Tournament
+        </button>
+    </div>
 
     <div class="results-frame">
         <iframe
+            id="tournament-frame"
             src="https://results.wfdf.sport/wucc-2026/games"
             title="WUCC 2026 games and results">
         </iframe>
     </div>
-
-    <a class="full-results"
-       href="https://results.wfdf.sport/wucc-2026/games"
-       target="_blank"
-       rel="noopener noreferrer">
-        Open full results ↗
+    <a
+    id="tournament-link"
+    class="full-results"
+    href="https://results.wfdf.sport/wucc-2026/games"
+    target="_blank"
+    rel="noopener noreferrer">
+    Open selected tournament page ↗
     </a>
 </main>
 
@@ -110,8 +126,40 @@
                         <p>+60 12-437 0802</p>
                     </a>
                 </div>
+                
             </div>
         </div>
     </footer>
+
+<script>
+    function showRecent() {
+        document.getElementById("tournament-frame").src =
+            "https://results.wfdf.sport/wucc-2026/games";
+
+        document.getElementById("tournament-title").textContent =
+            "WUCC 2026 Results";
+
+        document.getElementById("tournament-description").textContent =
+            "Games, scores, and standings from WFDF";
+
+        document.getElementById("tournament-link").href =
+            "https://results.wfdf.sport/wucc-2026/games";
+    }
+
+    function showUpcoming() {
+        document.getElementById("tournament-frame").src =
+            "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
+
+        document.getElementById("tournament-title").textContent =
+            "Upcoming: 2026 USA Ultimate Club Nationals";
+
+        document.getElementById("tournament-description").textContent =
+            "October 22–25, 2026 in San Diego, California";
+
+        document.getElementById("tournament-link").href =
+            "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
+    }
+</script>
+
 </body>
 </html>
