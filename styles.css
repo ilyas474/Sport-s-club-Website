@@ -569,6 +569,25 @@ button:hover {
     flex-grow: 1;
 }
 
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    gap: 8px;
+}
+
+.search-container input {
+    height:30px; 
+    width:400px;
+}
+
+#searchResult {
+    margin-left:155px;
+    font-size:20px;
+    text-decoration:underline;
+}
+
 .NavigationBar a {
     text-decoration: none;
     color: white;
