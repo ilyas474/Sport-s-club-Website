@@ -6,3 +6,14 @@ function scrollCoreValues(direction) {
         behavior: "smooth"
     });
 }
+
+new Swiper('.Panel', {
+  loop: true,
+  slidesPerView: 3,
+  spaceBetween: 30,
+
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
