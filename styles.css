@@ -155,10 +155,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .site-footer {
-    width: 100%;
+    width: auto;
     background-color:#5F0000;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -596,6 +599,10 @@ button:hover {
     padding: 10px 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
     
+}
+
+nav{
+    text-align:center;
 }
 
 nav a:hover {
