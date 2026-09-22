@@ -917,3 +917,56 @@ nav a::after {
     border: solid #ffffff;
     background-color: rgb(32, 123, 14);
 }
+
+.shopContainer {
+    align-items: center;
+    text-align: center;
+}
+
+.shopButton button {
+    border-radius: 20px;
+    border: solid #ffffff;
+    background-color: #1B4332;
+}
+
+.shopButton a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.shopButton button:hover {
+    background-color: rgb(32, 123, 14);
+    border: solid black;
+}
+
+.productLayout {
+    display: grid;
+    padding: 20px;
+    margin: 0 auto;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1000px;
+}
+
+.productCard {
+    background-color: #1B4332;
+    padding: 30px;
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.productCard p {
+    margin: 0;
+}
+
+.productCard h2 {
+    margin: 10px 0 10px;
+}
+
+.productLayout img {
+    width: 100%;
+    max-width: 400px;
+    height: 270px;
+    border-radius: 12px;
+}
