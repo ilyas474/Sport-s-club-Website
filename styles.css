@@ -605,10 +605,6 @@ button:hover {
     
 }
 
-nav {
-    text-align: center;
-}
-
 nav a:hover {
     color:red;
 }
@@ -801,6 +797,18 @@ nav a::after {
     display: inline-block;
     margin-top: 20px;
     color: #ffd54f;
+}
+
+.tournament-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin: 14px 0 30px;
+}
+
+.tournament-buttons button {
+    min-width: 210px;
+    padding: 12px 22px;
 }
 
 .logo-grid a:hover {
