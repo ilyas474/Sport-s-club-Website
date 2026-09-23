@@ -4,74 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frisbee Club - Achievements</title>
+    <link rel="icon" href="../Images/club_logo.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
+   
     <header>
         <div class="header">
             <table>
                 <tr>
                     <td>
-                     <h1><img src="../Images/club_logo.png" alt="Club Logo" id="logo">
-                        APU Frisbee Club</h1>
+                     <h1><img src="../Images/club_logo.png" alt="Club Logo">
+                        Frisbee Club</h1>
                     </td>
                 </tr>
             </table>
-            <div class="audio">
-                <audio controls>
-                    <source src="../mp3/Music.mp3" type="audio/mpeg">
-                </audio>
-            </div>
         </div>
         <hr>
     </header>
-    <div class="NavigationBar">
-        <nav>
-            <a href="home.html">Home</a> 
-            <a href="about.html">About Us</a> 
-            <div class="dropdown">
-                <a class="dropdown-trigger">THE ATHLETIC HUB ▾</a>
-                <div class="dropdown-content">
-                    <a href="news_and_media.html">News and Media</a>
-                    <a href="calendar_and_events.html">Calendar and Events</a>
-                    <a href="tournaments.html">Tournaments</a>
-                    <a href="achievements.html">Achievements</a>
+
+    
+    <nav class="chua-nav-bar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="acrchieve.html" class="active-page">Achievement</a>
+    </nav>
+    <hr>
+
+    
+    <div class="chua-wrapper">
+        <h2 class="chua-title">Our Frisbee Achievements & Awards</h2>
+        <p class="chua-subtitle">These are all the honors and milestones achieved by our team.</p>
+
+       
+        <div class="chua-grid">
+            
+            
+            <div class="chua-master-card">
+                
+               
+                <div id="national-text" class="parts-text-view" onclick="changeContent('national')">
+                    <div class="chua-icon">🏆</div>
+                    <h3 class="chua-card-title">National Open</h3>
+                    <span class="chua-badge">Champion (Gold Medal)</span>
+                    <p class="chua-desc">Our team won the grand finals against the strongest varsity teams in Malaysia.</p>
+                    <span style="color: navy; font-weight: bold; font-size: 0.85em; margin-top: 15px; display: block;">Click to see details & photos ➔</span>
+                </div>
+
+                
+                <div id="national-photo" class="parts-photo-view chua-hidden">
+                    <div class="chua-left-img">
+                        <img src="https://unsplash.com" alt="National Open">
+                    </div>
+                    <div class="chua-right-body">
+                        <span class="chua-badge">Tournament Detail</span>
+                        <h3 class="chua-card-title">National Open Championship</h3>
+                        <p class="chua-desc">
+                            During this National Open tournament, our team went through multiple high-intensity round-robin matches. Despite falling behind in the second half of the grand finals, the team executed flawless long-pass tactics to score consecutive points, successfully executing a stunning comeback victory to bring home our club's very first national gold medal!
+                        </p>
+                        <button class="chua-inner-return-btn" onclick="changeContent('national')">⬅️ Return back</button>
+                    </div>
+                
                 </div>
             </div>
-            <a href="merchandise.html">Merchandise</a>
-            <a href="faq.html">FAQ</a> 
-            <a href="enquiry.html">Enquiry</a> 
-            <a href="Registration.html">Register</a> 
-        </nav>
+
+           
+            <div class="chua-master-card">
+                
+               
+                <div id="mvp-text" class="parts-text-view" onclick="changeContent('mvp')">
+                    <div class="chua-icon">🎖️</div>
+                    <h3 class="chua-card-title">Most Valuable Player</h3>
+                    <span class="chua-badge">Individual Excellence</span>
+                    <p class="chua-desc">Our team leader was awarded the tournament MVP for outstanding performance.</p>
+                    <span style="color: navy; font-weight: bold; font-size: 0.85em; margin-top: 15px; display: block;">Click to see details & photos ➔</span>
+                </div>
+
+                
+                <div id="mvp-photo" class="parts-photo-view chua-hidden">
+                    <div class="chua-left-img">
+                        <img src="https://unsplash.com" alt="MVP">
+                    </div>
+                    <div class="chua-right-body">
+                        <span class="chua-badge">Player Spotlight</span>
+                        <h3 class="chua-card-title">Most Valuable Player (MVP)</h3>
+                        <p class="chua-desc">
+                            Our team captain delivered phenomenal statistics throughout the entire series, dominating both ends of the field. Not only did they excel in offense with unmatched assist counts, but they also contributed multiple spectacular layouts and layout dives to intercept opponent discs, fully earning the tournament MVP title.
+                        </p>
+                        <button class="chua-inner-return-btn" onclick="changeContent('mvp')">⬅️ Return back</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
     <hr>
 
-    <div class="page-container">
-        
-        <div class="page-header">
-            <h1>Our Frisbee Achievements & Awards</h1>
-            <p>These are all the honors and milestones achieved by our team.</p>
+    
+    <footer>
+        <h3>Contact Us</h3>
+        <p><strong>Address:</strong><br/>No. 11, Jalan Teknologi 5, Taman Teknologi Malaysia, Bukit Jalil, 57000 Kuala Lumpur</p>
+        <p><b>Phone:</b><br>+60 12-437 0802</p>
+        <div class="social-media">
+            <p>
+                <a href="https://instagram.com"><img src="instagram.svg" width="50" height="50"></a>
+                <a href="https://tiktok.com"><img src="tiktok.png" width="50" height="50"></a>
+                <a href="https://whatsapp.com"><img src="whatsapp.png" width="50" height="50"></a>
+            </p>
         </div>
+    </footer>
 
-        <div class="awards-grid">
-
-            <div class="award-card">
-                <div class="award-icon">icon</div>
-                <div class="award-title">National Open</div>
-                <div class="award-status">Champion (Gold Medal)</div>
-                <div class="award-desc">Our team won the grand finals against the strongest varsity teams in Malaysia.</div>
-            </div>
-
-            <div class="award-card">
-                <div class="award-icon">icon</div>
-                <div class="award-title">Most Valuable Player</div>
-                <div class="award-status">Individual Excellence</div>
-                <div class="award-desc">Our team leader was awarded the tournament MVP for outstanding performance.</div>
-            </div>
-
-        </div> 
-
-    </div> 
-
+   
+    <script src="script.js"></script>
 </body>
 </html>
