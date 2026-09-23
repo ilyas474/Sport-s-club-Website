@@ -19,6 +19,11 @@
                     </td>
                 </tr>
             </table>
+            <div class="audio">
+                <audio controls>
+                    <source src="../mp3/Music.mp3" type="audio/mpeg">
+                </audio>
+            </div>
         </div>
         <hr>
     </header>
@@ -42,108 +47,82 @@
         </nav>
     </div>
     <hr>
-     <h1 class="calendar-page-title">Calendar & Events</h1>
+    
+<h1 id="calendar-page-title"
+    style="text-align:center; color:#FF4500; font-size:56px;">
+    Calendar & Events
+</h1>
 
-    <section class="calendar-section">
-
-        <div class="calendar-header">
-            <button id="prev-btn">&#8249;</button>
-
-            <h2 id="month-title">September 2026</h2>
-
-            <button id="next-btn">&#8250;</button>
-        </div>
-
-        <div class="calendar-grid">
-
-    <!-- Day names -->
-    <div class="day-name">Sun</div>
-    <div class="day-name">Mon</div>
-    <div class="day-name">Tue</div>
-    <div class="day-name">Wed</div>
-    <div class="day-name">Thu</div>
-    <div class="day-name">Fri</div>
-    <div class="day-name">Sat</div>
-
-
-    <!-- Calendar dates start here -->
-
-    <div class="calendar-day"></div>
-    <div class="calendar-day"></div>
-
-    <div class="calendar-day">1</div>
-    <div class="calendar-day">2</div>
-
-    <div class="calendar-day">
-        <span class="date-number">3</span>
-
-        <div class="calendar-event training-event">
-            Training
-        </div>
-    </div>
-
-    <div class="calendar-day">4</div>
-    <div class="calendar-day">5</div>
-
-    <div class="calendar-day">6</div>
-    <div class="calendar-day">7</div>
-    <div class="calendar-day">8</div>
-    <div class="calendar-day">9</div>
-
-    <div class="calendar-day">
-        <span class="date-number">10</span>
-
-        <div class="calendar-event friendly-event">
-            Friendly Match
-        </div>
-    </div>
-
-    <div class="calendar-day">11</div>
-    <div class="calendar-day">12</div>
-
-    <div class="calendar-day">13</div>
-    <div class="calendar-day">14</div>
-    <div class="calendar-day">15</div>
-    <div class="calendar-day">16</div>
-
-    <div class="calendar-day">
-        <span class="date-number">17</span>
-
-        <div class="calendar-event tournament-event">
-            Tournament
-        </div>
-    </div>
-
-    <div class="calendar-day">18</div>
-    <div class="calendar-day">19</div>
-
-    <div class="calendar-day">20</div>
-    <div class="calendar-day">21</div>
-    <div class="calendar-day">22</div>
-    <div class="calendar-day">23</div>
-    <div class="calendar-day">24</div>
-    <div class="calendar-day">25</div>
-    <div class="calendar-day">26</div>
-
-    <div class="calendar-day">27</div>
-    <div class="calendar-day">28</div>
-    <div class="calendar-day">29</div>
-    <div class="calendar-day">30</div>
-
+<div class="event-filters">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="training-event">Training</button>
+    <button class="filter-btn" data-filter="friendly-event">Friendly Match</button>
+    <button class="filter-btn" data-filter="tournament-event">Tournament</button>
 </div>
 
-    </section>
+<section class="calendar-section">
 
-    <section class="event-details">
-        <h2>Event Details</h2>
+    <div class="calendar-header">
+        <button id="prev-btn">Previous</button>
 
-        <p>Select an event from the calendar to view more information.</p>
-    </section>
+        <h2 id="month-title">September 2026</h2>
 
-    <section class="upcoming-events">
-        <h2>Upcoming Events</h2>
-    </section>
+        <button id="next-btn">Next</button>
+    </div>
 
+    <div class="calendar-grid">
+
+        <div class="day-name">Sun</div>
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+
+    </div>
+
+</section>
+
+<section class="event-details">
+
+    <h2>Event Details</h2>
+
+    <h3 id="event-title">Select an Event</h3>
+
+    <div class="event-info-grid">
+
+        <p>
+            <strong>Date</strong>
+            <span id="event-date">-</span>
+        </p>
+
+        <p>
+            <strong>Time</strong>
+            <span id="event-time">-</span>
+        </p>
+
+        <p>
+            <strong>Location</strong>
+            <span id="event-location">-</span>
+        </p>
+
+    </div>
+
+    <p id="event-description">
+        Click an event from the calendar to view more information.
+    </p>
+
+</section>
+
+<section class="upcoming-events">
+
+    <h2>Upcoming Events</h2>
+
+    <div id="upcoming-events-list"></div>
+
+</section>
+    
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column-brand-info">
@@ -159,7 +138,7 @@
                 <ul class="footer-links">
                     <li><a href="home.html">Home</a></li>
                     <li><a href="about.html">About Our Club</a></li>
-                    <li><a href="calendar_and_events.html">Training Schedule</a></li>
+                    <li><a href="calendar_and_events.html">Calendar & Events</a></li>
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="sponsors.html">Sponsors & Partners</a></li>
                 </ul>
