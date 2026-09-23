@@ -1171,4 +1171,147 @@ nav a::after {
         font-size: 10px;
         padding: 4px;
     }
+}.chua-nav-bar a {
+    margin-right: 30px; 
+    text-decoration: none;
+    color: white; 
 }
+.chua-nav-bar a:last-child {
+    margin-right: 0;
+}
+.active-page {
+    font-weight: bold;
+    text-decoration: underline !important;
+    color: gold !important; 
+}
+
+.chua-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.chua-title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2.2em;
+    color: gold; 
+    text-shadow: 2px 2px 4px black; 
+}
+.chua-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: lightgray; 
+}
+
+.chua-grid {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+    width: 100% !important;
+}
+
+.chua-master-card {
+    background: white !important; 
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    box-sizing: border-box !important;
+    width: 850px !important;
+    max-width: 100% !important;
+    min-height: 250px;
+    display:block !important;
+    position:relative !important;
+}
+
+.parts-text-view {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.parts-text-view:hover {
+    background: rgba(0, 0, 0, 0.05); 
+}
+
+.parts-photo-view {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+
+.chua-left-img {
+    width: 20% !important;
+    height: 250px !important;
+    background: navy !important; 
+    flex-shrink: 0 !important;
+}
+.chua-left-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+
+.chua-right-body {
+    width: 80% !important;
+    padding: 30px !important;
+    color: darkslategray !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    text-align: left;
+}
+
+
+.chua-inner-return-btn {
+    background: steelblue;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    font-size: 0.85em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    align-self: flex-end;
+    transition:background 0.2s;
+}
+.chua-inner-return-btn:hover { 
+    background: royalblue; 
+
+}
+.chua-badge { 
+    color: darkorange;
+    font-weight: bold; 
+    font-size: 0.95em; 
+    display: block; 
+    margin-bottom: 4px; 
+}
+.chua-card-title { 
+    font-size: 1.8em; 
+    margin: 5px 0 10px 0; 
+    color: navy; 
+    font-weight: bold; 
+}
+.chua-desc { 
+    color: dimgray; 
+    font-size: 0.95em; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+.chua-icon { 
+    font-size: 3.5em; 
+    margin-bottom: 10px; 
+}
+
+.chua-hidden { display: none !important; };

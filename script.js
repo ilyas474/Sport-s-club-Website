@@ -51,3 +51,13 @@ new Swiper('.Panel', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+function changeContent(cardId) {
+    const textView = document.getElementById(cardId + '-text');
+    const photoView = document.getElementById(cardId + '-photo');
+    
+    if (textView && photoView) {
+        textView.classList.toggle('chua-hidden');
+        photoView.classList.toggle('chua-hidden');
+    }
+}
