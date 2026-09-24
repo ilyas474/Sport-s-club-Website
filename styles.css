@@ -947,14 +947,17 @@ nav a::after {
     text-align: center;
 }
 
-.shopContainer p {
+.shopText p {
     padding: 0;
     margin-top: 0;
+    color: gold;
 }
 
-.shopContainer h1 {
+.shopText h1 {
     padding: 0;
     margin-bottom: 0;
+    margin-top: 0;
+    color: gold;
 }
 
 .shopButton button {
@@ -986,7 +989,7 @@ nav a::after {
     background-color: #1B4332;
     padding: 30px;
     margin: 0;
-    border-radius: 12px;
+    border-radius: 12%;
     overflow: hidden;
 }
 
@@ -1002,11 +1005,12 @@ nav a::after {
     width: 100%;
     max-width: 400px;
     height: 270px;
-    border-radius: 12px;
+    border-radius: 8%;
 }
 
-.Audio {
-    background: transparent;
+.attribution p {
+    font-size: 14px;
+    font-style: italic;
 }
 
 .chua-nav-bar a {
@@ -1442,4 +1446,52 @@ nav a::after {
 
 #event-description.tournament-event {
     border-left-color: #8B0000;
+}
+
+.productCard img.zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.productCard img.zoom:hover {
+    transform: scale(1.03);
+}
+
+.zoomContainer {
+    display: none;
+    position: fixed;
+    z-index: 69420;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.imageZoom {
+    display: block;
+    max-width: 60%;
+    max-height: 65%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    animation: zoomIn 0.3s ease;
+}
+
+.xButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.xButton:hover {
+    color: #54d6a0;
 }
