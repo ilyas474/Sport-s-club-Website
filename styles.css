@@ -696,7 +696,7 @@ nav a::after {
 }
 
 .partners {
-    background-color: #111;
+    background-color: transparent;
     color: white;
     text-align: center;
     padding: 60px 20px;
