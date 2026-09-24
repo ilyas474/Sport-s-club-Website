@@ -245,45 +245,30 @@ const events = [
 ];
 
 function renderCalendar() {
-
     const oldDays = document.querySelectorAll(".calendar-day");
-
     oldDays.forEach(function(day) {
         day.remove();
     });
 
     monthTitle.textContent =
         months[currentMonth] + " " + currentYear;
-
     const firstDay =
         new Date(currentYear, currentMonth, 1).getDay();
-
     const daysInMonth =
         new Date(currentYear, currentMonth + 1, 0).getDate();
-
     for (let i = 0; i < firstDay; i++) {
-
         const emptyDay = document.createElement("div");
-
         emptyDay.classList.add("calendar-day");
-
         calendarGrid.appendChild(emptyDay);
     }
 
     for (let day = 1; day <= daysInMonth; day++) {
-
         const dayBox = document.createElement("div");
-
         dayBox.classList.add("calendar-day");
-
         const dateNumber = document.createElement("span");
-
         dateNumber.classList.add("date-number");
-
         dateNumber.textContent = day;
-
         dayBox.appendChild(dateNumber);
-
         const event = events.find(function(item) {
 
             return item.day === day &&
@@ -295,70 +280,52 @@ function renderCalendar() {
             event &&
             (activeFilter === "all" || event.type === activeFilter)
         ) {
-
             const eventBox = document.createElement("div");
-
             eventBox.classList.add(
                 "calendar-event",
                 event.type
             );
-
             eventBox.textContent = event.title;
-
             eventBox.addEventListener("click", function() {
-
                 document.getElementById("event-title").textContent =
                     event.title;
-
                 document.getElementById("event-date").textContent =
                     day + " " +
                     months[currentMonth] + " " +
                     currentYear;
-
                 document.getElementById("event-time").textContent =
                     event.time;
-
                 document.getElementById("event-location").textContent =
                     event.location;
-                
                 const eventDescription =
                 document.getElementById("event-description");
-
                 eventDescription.classList.remove(
                     "training-event",
                     "friendly-event",
                     "tournament-event"
                 );
-
                 eventDescription.classList.add(event.type);
-
                 eventDescription.textContent =
                    event.description;
             });
-
             dayBox.appendChild(eventBox);
         }
-
         calendarGrid.appendChild(dayBox);
     }
 }
 
 function renderUpcomingEvents() {
-
     const upcomingList =
         document.getElementById("upcoming-events-list");
 
     if (!upcomingList) {
         return;
     }
-
     upcomingList.innerHTML = "";
 
     events.slice(0, 5).forEach(function(event) {
-
         const eventItem =
             document.createElement("div");
-
         eventItem.classList.add("upcoming-event-item", event.type);
 
         eventItem.innerHTML =
@@ -380,31 +347,23 @@ function renderUpcomingEvents() {
 }
 
 if (prevButton && nextButton && monthTitle && calendarGrid) {
-
     prevButton.addEventListener("click", function() {
-
         currentMonth--;
-
         if (currentMonth < 0) {
             currentMonth = 11;
             currentYear--;
         }
-
         renderCalendar();
     });
 
     nextButton.addEventListener("click", function() {
-
         currentMonth++;
-
         if (currentMonth > 11) {
             currentMonth = 0;
             currentYear++;
         }
-
         renderCalendar();
     });
-
     renderCalendar();
 }
 
@@ -413,20 +372,14 @@ renderUpcomingEvents();
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(function(button) {
-
     button.addEventListener("click", function() {
-
         activeFilter = button.dataset.filter;
-
         filterButtons.forEach(function(btn) {
             btn.classList.remove("active");
         });
-
         button.classList.add("active");
-
         renderCalendar();
     });
-
 });
 
 const allButton = document.querySelector('[data-filter="all"]');
@@ -434,3 +387,29 @@ const allButton = document.querySelector('[data-filter="all"]');
 if (allButton) {
     allButton.classList.add("active");
 }
+
+const zoomContainer = document.querySelector(".zoomContainer");
+const imageZoom = document.querySelector(".imageZoom");
+const xButton = document.querySelector(".xButton");
+const zoom = document.querySelectorAll(".zoom");
+
+zoom.forEach(function(image) {
+    image.addEventListener("click", function() {
+        imageZoom.src = image.src;
+        imageZoom.alt = image.alt;
+        zoomContainer.style.display = "flex";
+        document.body.style.overflow = "hidden";
+    });
+});
+
+xButton.addEventListener("click", function() {
+    zoomContainer.style.display = "none";
+    document.body.style.overflow = "";
+});
+
+zoomContainer.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        zoomContainer.style.display = "none";
+        document.body.style.overflow = "";
+    }
+});
