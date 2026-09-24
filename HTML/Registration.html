@@ -6,6 +6,7 @@
     <title>Registration</title>
     <link rel="icon" href="../Images/club_logo.png">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <header>
@@ -52,20 +53,54 @@
     <p>We are thrilled to have you join our vibrant community of frisbee enthusiasts!</p>
         <h3>Please fill in all the details required.</h3>
     <form action="Submit-Registration.html" method="get">
-        <label><b>Full Name:</b></label>
-        <input type="text" id="Full_Name" name="full_name" required placeholder="Enter your full name"
-        oninvalid="this.setCustomValidity('Please enter your full name')"
+
+        <label for="Full_Name">
+            <b>Full Name:</b>
+        </label>
+        <input type="text" 
+        id="Full_Name" 
+        name="full_name" 
+        required 
+        placeholder="Enter your full name"
+        pattern="[A-Za-z]+( [A-Za-z]+)*"
+        maxlength="50"
+        oninvalid="this.setCustomValidity('Please use letters and spaces only')"
         oninput="this.setCustomValidity('')"><br><br>
 
-        <label><b>Student ID:</b></label>
-        <input type="text" id="Student_ID" name="student_id" required placeholder="TPXXXXXX"
-        oninvalid="this.setCustomValidity('Please enter your student ID')"
-        oninput="this.setCustomValidity('')"><br><br>
+        <label for="Student_ID">
+            <b> Student ID:</b>
+        </label>
 
-        <label><b>Phone/Contact Number:</b></label>
-        <input type="tel" id="Phone_Contact" name="phone_contact" required placeholder="(+XXX) XX XXXX-XXXX"
-        oninvalid="this.setCustomValidity('Please enter your phone number')"
-        oninput="this.setCustomValidity('')"><br><br>
+        <input
+        type="text"
+        id="Student_ID"
+        name="student_id"
+        placeholder="TPXXXXXX"
+        inputmode="numeric"
+        pattern="TP[0-9]{5,6}"
+        maxlength="8"
+        required
+        oninvalid="this.setCustomValidity('Please enter TP followed by 5 or 6 digits')"
+        oninput="this.setCustomValidity('')">
+        <br><br>
+
+        <label for="Phone_Contact">
+         <b>Phone/Contact Number:</b>
+        </label>
+
+         <input
+          type="tel"
+          id="Phone_Contact"
+          name="phone_contact"
+          placeholder="+60 XX-XXX XXXX"
+          inputmode="numeric"
+          pattern="\+60 [0-9]{2}-[0-9]{3} [0-9]{4}"
+          maxlength="15"
+          autocomplete="tel"
+          required
+          oninvalid="this.setCustomValidity('Please enter a complete Malaysian phone number')"
+          oninput="this.setCustomValidity('')">
+
 
         <label><b>Date of Birth:</b></label>
         <input type="date" id="Date_of_Birth" name="Date of Birth" required><br><br>

@@ -434,3 +434,57 @@ const allButton = document.querySelector('[data-filter="all"]');
 if (allButton) {
     allButton.classList.add("active");
 }
+
+const phoneInput = document.getElementById("Phone_Contact");
+
+if (phoneInput) {
+    phoneInput.addEventListener("input", function () {
+        if (phoneInput.value === "") {
+            return;
+        }
+
+        let digits = phoneInput.value.replace(/\D/g, "");
+
+        if (digits.startsWith("60")) {
+            digits = digits.slice(2);
+        }
+
+        if (digits.startsWith("0")) {
+            digits = digits.slice(1);
+        }
+
+        digits = digits.slice(0, 9);
+
+        let formattedNumber = "+60";
+
+        if (digits.length > 0) {
+            formattedNumber += " " + digits.slice(0, 2);
+        }
+
+        if (digits.length > 2) {
+            formattedNumber += "-" + digits.slice(2, 5);
+        }
+
+        if (digits.length > 5) {
+            formattedNumber += " " + digits.slice(5, 9);
+        }
+
+        phoneInput.value = formattedNumber;
+    });
+}
+
+const studentIdInput = document.getElementById("Student_ID");
+
+if (studentIdInput) {
+    studentIdInput.addEventListener("input", function () {
+        if (studentIdInput.value === "") {
+            return;
+        }
+
+        let digits = studentIdInput.value.replace(/\D/g, "");
+
+        digits = digits.slice(0, 6);
+
+        studentIdInput.value = "TP" + digits;
+    });
+}
