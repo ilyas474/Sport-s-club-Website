@@ -162,10 +162,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
 }
 
 .site-footer {
-    width: 100%;
+    width: auto;
     background-color:#5F0000;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -605,6 +608,10 @@ button:hover {
     
 }
 
+nav{
+    text-align:center;
+}
+
 nav a:hover {
     color:red;
 }
@@ -1002,3 +1009,437 @@ nav a::after {
     background: transparent;
 }
 
+.chua-nav-bar a {
+    margin-right: 30px; 
+    text-decoration: none;
+    color: white; 
+}
+.chua-nav-bar a:last-child {
+    margin-right: 0;
+}
+.active-page {
+    font-weight: bold;
+    text-decoration: underline !important;
+    color: gold !important; 
+}
+
+.chua-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+.chua-title {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2.2em;
+    color: gold; 
+    text-shadow: 2px 2px 4px black; 
+}
+.chua-subtitle {
+    text-align: center;
+    margin-bottom: 40px;
+    color: lightgray; 
+}
+
+.chua-grid {
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 40px !important;
+    width: 100% !important;
+}
+
+.chua-master-card {
+    background: white !important; 
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+    box-sizing: border-box !important;
+    width: 850px !important;
+    max-width: 100% !important;
+    min-height: 250px;
+    display:block !important;
+    position:relative !important;
+}
+
+.parts-text-view {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.parts-text-view:hover {
+    background: rgba(0, 0, 0, 0.05); 
+}
+
+.parts-photo-view {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+
+.chua-left-img {
+    width: 20% !important;
+    height: 250px !important;
+    background: navy !important; 
+    flex-shrink: 0 !important;
+}
+.chua-left-img img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+
+.chua-right-body {
+    width: 80% !important;
+    padding: 30px !important;
+    color: darkslategray !important; 
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    text-align: left;
+}
+
+
+.chua-inner-return-btn {
+    background: steelblue;
+    color: white;
+    border: none;
+    padding: 6px 15px;
+    font-size: 0.85em;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    align-self: flex-end;
+    transition: background 0.2s;
+}
+.chua-inner-return-btn:hover { 
+    background: royalblue; 
+
+}
+.chua-badge { 
+    color: darkorange;
+    font-weight: bold; 
+    font-size: 0.95em; 
+    display: block; 
+    margin-bottom: 4px; 
+}
+.chua-card-title { 
+    font-size: 1.8em; 
+    margin: 5px 0 10px 0; 
+    color: navy; 
+    font-weight: bold; 
+}
+.chua-desc { 
+    color: dimgray; 
+    font-size: 0.95em; 
+    line-height: 1.6; 
+    margin: 0; 
+}
+.chua-icon { 
+    font-size: 3.5em; 
+    margin-bottom: 10px; 
+}
+
+.chua-hidden {
+    display: none !important;
+}
+
+#calendar-page-title {
+    width: 100%;
+    margin: 30px 0 25px 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: #FF4500;
+    font-size: 46px;
+    font-weight: bold;
+    text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8);
+    background: transparent;
+}
+
+.calendar-section {
+    width: 95%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #2C2C2C;
+    padding: 28px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+#month-title {
+    color: #ffd54f;
+    margin: 0;
+    font-size: 34px;
+    text-align: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.calendar-header button {
+    min-width: 110px;
+    height: 44px;
+    padding: 0 18px;
+    background-color: #1B4332;
+    color: white;
+    border: 1px solid #6c9a82;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.calendar-header button:hover {
+    background-color: #2D6A4F;
+    color: white;
+    border-color: white;
+    transform: translateY(-2px);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day-name {
+    background-color: #1B4332;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.calendar-day {
+    min-height: 115px;
+    border: 1px solid #555;
+    padding: 10px;
+    background-color: #202020;
+    color: white;
+    text-align: left;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease;
+}
+
+.calendar-day:hover {
+    background-color: #333333;
+}
+
+.date-number {
+    display: block;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+}
+
+.calendar-event {
+    margin-top: 10px;
+    padding: 7px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.calendar-event:hover {
+    transform: scale(1.03);
+}
+
+.training-event {
+    background-color: #2D6A4F;
+}
+
+.friendly-event {
+    background-color: #355070;
+}
+
+.tournament-event {
+    background-color: #8B0000;
+}
+
+.event-details,
+.upcoming-events {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #2C2C2C;
+    padding: 24px 28px;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+.event-details h2,
+.upcoming-events h2 {
+    color: #ffd54f;
+}
+
+.event-details p,
+.upcoming-events p {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .calendar-section,
+    .event-details,
+    .upcoming-events {
+        width: 95%;
+        padding: 15px;
+    }
+
+    #month-title {
+        font-size: 24px;
+    }
+
+    .calendar-header button {
+        min-width: 80px;
+        height: 38px;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+
+    .day-name {
+        padding: 8px 3px;
+        font-size: 12px;
+    }
+
+    .calendar-day {
+        min-height: 80px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .calendar-event {
+        font-size: 10px;
+        padding: 4px;
+    }
+}
+
+.upcoming-event-item {
+    background-color: #202020;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.upcoming-event-item.training-event {
+    border-left: 5px solid #2D6A4F;
+}
+
+.upcoming-event-item.friendly-event {
+    border-left: 5px solid #355070;
+}
+
+.upcoming-event-item.tournament-event {
+    border-left: 5px solid #8B0000;
+}
+
+.upcoming-event-item h3 {
+    color: #ffd54f;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.upcoming-event-item p {
+    margin: 6px 0;
+    color: white;
+}
+
+.event-filters {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.filter-btn {
+    background-color: #1B4332;
+    color: white;
+    border: 1px solid #6c9a82;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    background-color: #2D6A4F;
+    border-color: white;
+}
+
+.filter-btn.active {
+    background-color: #ffd54f;
+    color: black;
+}
+
+#event-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.event-info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.event-info-grid p {
+    background-color: #202020;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.event-info-grid strong {
+    display: block;
+    color: #ffd54f;
+    margin-bottom: 6px;
+}
+
+.event-info-grid span {
+    color: white;
+}
+
+#event-description {
+    background-color: #202020;
+    padding: 16px;
+    border-radius: 8px;
+    line-height: 1.6;
+    margin: 0;
+    border-left: 4px solid transparent;
+}
+
+#event-description.training-event {
+    border-left-color: #2D6A4F;
+}
+
+#event-description.friendly-event {
+    border-left-color: #355070;
+}
+
+#event-description.tournament-event {
+    border-left-color: #8B0000;
+}
