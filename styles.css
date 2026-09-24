@@ -15,7 +15,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 20px 0;
 }
 
 .about-cards {
@@ -837,6 +837,15 @@ nav a::after {
     text-align: center;
 }
 
+.Box2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    text-align: center;
+}
+
 .Box1Image {
     flex: 0 0 50%;
     border-radius: 20px;
@@ -846,6 +855,13 @@ nav a::after {
 
 .Box1Image img {
     width: 100%;
+}
+
+.Box1Vid video {
+    flex: 0 0 50%;
+    border-radius: 20px;
+    height: 350px;
+    max-width: 550px;
 }
 
 .Box1Text {
@@ -929,6 +945,16 @@ nav a::after {
 .shopContainer {
     align-items: center;
     text-align: center;
+}
+
+.shopContainer p {
+    padding: 0;
+    margin-top: 0;
+}
+
+.shopContainer h1 {
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .shopButton button {
