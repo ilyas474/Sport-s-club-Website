@@ -340,17 +340,21 @@ zoom.forEach(function(image) {
     });
 });
 
+if(xButton){
 xButton.addEventListener("click", function() {
     zoomContainer.style.display = "none";
     document.body.style.overflow = "";
 });
+}
 
+if(zoomContainer){
 zoomContainer.addEventListener("click", function(event) {
     if (event.target === modal) {
         zoomContainer.style.display = "none";
         document.body.style.overflow = "";
     }
 });
+}
 
 const phoneInput = document.getElementById("Phone_Contact");
 
@@ -393,3 +397,54 @@ if (studentIdInput) {
         studentIdInput.value = "TP" + digits;
     });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            document.querySelector(".filter-btn.active").classList.remove("active");
+            button.classList.add("active");
+
+            const target = button.getAttribute("data-target");
+            galleryItems.forEach(item => {
+                if (target === "all") {
+                    item.style.display = "block";
+                } else {
+                    if (item.classList.contains(target)) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                }
+            });
+        });
+    });
+/*放大*/
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    galleryItems.forEach(item => {
+        const img = item.querySelector("img");
+        if (img) {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = img.alt;
+            });
+        }
+    });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+});
