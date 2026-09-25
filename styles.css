@@ -16,14 +16,13 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    margin: 0;
+    margin: -30px;
 }
 
 .header h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0;
 }
 
 .audio {
