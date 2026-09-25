@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="../styles.css">
-    <script src="../script.js"></script>
+    <title>Gallery - APU Frisbee Club</title>
     <link rel="icon" href="../Images/club_logo.png">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
     <header>
@@ -29,7 +28,7 @@
     </header>
     <div class="NavigationBar">
         <nav>
-            <a href="home.html">Home</a> 
+            <a href="home.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="clubMembers.html">Club Members</a>
             <div class="dropdown">
@@ -43,13 +42,105 @@
                 </div>
             </div>
             <a href="merchandise.html">Merchandise</a>
-            <a href="faq.html">FAQ</a> 
-            <a href="enquiry.html">Enquiry</a> 
-            <a href="Registration.html">Register</a> 
+            <a href="faq.html">FAQ</a>
+            <a href="enquiry.html">Enquiry</a>
+            <a href="Registration.html">Register</a>
         </nav>
     </div>
     <hr>
 
+
+    <main class="gallery-container">
+        <div class="gallery-title">
+            <h2>Our Club Gallery</h2>
+            <p>Catching the best moments on and off the field 🥏</p>
+        </div>
+
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-target="all">All Photos</button>
+            <button class="filter-btn" data-target="member">Team member</button>
+            <button class="filter-btn" data-target="tournaments">Tournaments</button>
+            <button class="filter-btn" data-target="videos">Videos</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item member">
+                <img src="../Images/apu.insta6.jpg">
+                <div class="item-overlay">
+                    <span>Our team</span>
+                </div>
+            </div>
+
+
+            <div class="gallery-item member">
+                <img src="../Images/apu.insta5.jpg" alt="APU Tournament Match">
+                <div class="item-overlay">
+                    <span>Our team</span>
+                </div>
+            </div>
+
+            <div class="gallery-item member">
+                <img src="../Images/apu.insta4.jpg" alt="Disc Layout Drill">
+                <div class="item-overlay">
+                    <span>Our team</span>
+                </div>
+            </div>
+
+            <div class="gallery-item tournaments">
+                <img src="../Images/apu.insta3.jpg" alt="Team Victory Celebration">
+                <div class="item-overlay">
+                    <span>NUBR 2026</span>
+                </div>
+            </div>
+
+            <div class="gallery-item videos" >
+                <video controls> 
+                    <source src="../mp4/highlights.mp4" >
+                </video>
+                <div class="video-title-bar">Celebration</div>
+            </div>
+
+            <div class="gallery-item training">
+                <img src="../Images/apu.insta1.jpg" alt="Team photo">
+                <div class="item-overlay">
+                    <span>scrubels 2024 class photo </span>
+                </div>
+            </div>
+
+            <div class="gallery-item tournaments">
+                <img src="../Images/apu.insta7.jpg" alt="Team Victory Celebration">
+                <div class="item-overlay">
+                    <span>NUBR 2024</span>
+                </div>
+            </div>
+
+            <div class="gallery-item tournaments">
+                <img src="../Images/apu.insta8.jpg" alt="Team Victory Celebration">
+                <div class="item-overlay">
+                    <span>Pixels</span>
+                </div>
+            </div>
+
+              <div class="gallery-grid">
+            <div class="gallery-item member">
+                <img src="../Images/apu.insta2.jpg">
+                <div class="item-overlay">
+                    <span>Our team</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="" alt="">
+        <div id="lightbox-caption"></div>
+    </div>
+    
+
+    <hr>
     <footer class="site-footer">
         <div class="footer-container">
             <div class="footer-column-brand-info">
@@ -88,15 +179,15 @@
             <div class="footer-column" style="margin-left:40px;">
                 <h4>Find us on social media:</h4>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/apufrisbeeclub/"> 
+                    <a href="https://instagram.com"> 
                         <img src="../Images/instagram.svg" alt="Instagram">
                         <p>@apufrisbeeclub</p>
                     </a>
-                    <a href="https://www.tiktok.com/@apu.frisbee.club">
+                    <a href="https://tiktok.com">
                         <img src="../Images/tiktok.png" alt="TikTok">
                         <p>@apu.frisbee.club</p>
                     </a>
-                    <a href="https://api.whatsapp.com/send?phone=60124370802">
+                    <a href="https://whatsapp.com">
                         <img src="../Images/whatsapp.png" alt="WhatsApp">
                         <p>Chat on WhatsApp</p>
                     </a>
@@ -104,5 +195,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../script.js"></script>
 </body>
 </html>
