@@ -448,3 +448,30 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+/*rules*/
+document.addEventListener("DOMContentLoaded", function() {
+    const accHeaders = document.querySelectorAll(".accordion-header");
+
+    if (accHeaders.length > 0) {
+        accHeaders.forEach(header => {
+            header.addEventListener("click", function() {
+               
+                const content = this.nextElementSibling;
+                const isActive = this.classList.contains("active");
+                accHeaders.forEach(otherHeader => {
+                    otherHeader.classList.remove("active");
+                    otherHeader.nextElementSibling.style.maxHeight = null;
+                    otherHeader.nextElementSibling.style.paddingTop = "0";
+                    otherHeader.nextElementSibling.style.paddingBottom = "0";
+                });
+
+              
+                if (!isActive) {
+                    this.classList.add("active");
+                    content.style.maxHeight = content.scrollHeight + "px"; 
+                }
+            });
+        });
+    }
+});

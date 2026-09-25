@@ -1894,3 +1894,88 @@ video:hover {
     font-weight: bold;
     cursor: pointer;
 }
+
+/*rules*/
+
+.rules-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rules-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.rules-header h2 {
+    font-size: 34px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.rules-header p {
+    color:white;
+    font-size: 16px;
+}
+
+.accordion-wrapper {
+    border-radius: 0;
+    overflow: visible;
+    box-shadow:none;
+}
+
+.accordion-item {
+    background-color:grey;
+    margin-bottom: 15px;
+    border: 1px;
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    width: 100%;
+    background-color:black;
+    text-align: left;
+    padding: 18px 20px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.accordion-header:hover {
+    background-color: white;
+    color: blue;
+}
+
+
+.accordion-header.active {
+    background-color: blue;
+    color: white;
+}
+
+.accordion-content {
+    background-color: #ffffff;
+    max-height: 0; /* 默认关闭 */
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.accordion-content p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
