@@ -14,6 +14,17 @@ p {
     height:100px;
 }
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
 /* Header */
 .header {
     display: flex;
@@ -82,15 +93,12 @@ nav a::after {
     transition: width 0.25s ease;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
-    background-size: cover;   
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
+.NavigationBar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 /*About Us Page*/
@@ -655,14 +663,6 @@ button:hover {
     margin-left:155px;
     font-size:20px;
     text-decoration:underline;
-}
-
-.NavigationBar a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .dropdown {
