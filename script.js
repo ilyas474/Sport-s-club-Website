@@ -1,3 +1,4 @@
+
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -106,8 +107,8 @@ const events = [
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Casual friendly match for members to practise teamwork, positioning and match play."
+        location: "Volleyball Court",
+        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
     },
     {
         day: 17,
@@ -131,24 +132,14 @@ const events = [
         description: "Regular training session covering basic skills, fitness drills and team practice."
     },
     {
-        day: 8,
-        month: 9,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Training session focused on passing accuracy, catching under pressure and movement into space."
-    },
-    {
         day: 15,
         month: 9,
         year: 2026,
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
+        location: "Volleyball Court",
+        description: "Friendly match session for members to practise teamwork and match play."
     },
     {
         day: 22,
@@ -157,8 +148,8 @@ const events = [
         title: "Frisbee Training",
         type: "training-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Weekly club training with warm-up drills, skill practice and short games."
+        location: "APU Futsal Court",
+        description: "Weekly club training with drills, skill practice and short games."
     },
 
     {
@@ -178,18 +169,8 @@ const events = [
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
-    },
-    {
-        day: 19,
-        month: 10,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Regular training session with throwing drills, catching practice and team scrimmages."
+        location: "Volleyball Court",
+        description: "Friendly match between club members, with selected sessions involving IMU students."
     },
     {
         day: 28,
@@ -200,47 +181,6 @@ const events = [
         time: "9:00 AM - 5:00 PM",
         location: "APU Futsal Court",
         description: "Competitive club tournament with scheduled matches and team-based competition."
-    },
-
-    {
-        day: 3,
-        month: 11,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Weekly training session focused on core frisbee skills and match preparation."
-    },
-    {
-        day: 10,
-        month: 11,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Regular practice session with drills followed by short competitive games."
-    },
-    {
-        day: 17,
-        month: 11,
-        year: 2026,
-        title: "Friendly Match",
-        type: "friendly-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
-    },
-    {
-        day: 20,
-        month: 11,
-        year: 2026,
-        title: "Year-End Tournament",
-        type: "tournament-event",
-        time: "9:00 AM - 5:00 PM",
-        location: "APU Futsal Court",
-        description: "Year-end club tournament bringing members together for a full day of team matches."
     }
 ];
 
@@ -347,23 +287,21 @@ function renderUpcomingEvents() {
 }
 
 if (prevButton && nextButton && monthTitle && calendarGrid) {
+
     prevButton.addEventListener("click", function() {
-        currentMonth--;
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
+        if (currentMonth > 8) {
+            currentMonth--;
+            renderCalendar();
         }
-        renderCalendar();
     });
 
     nextButton.addEventListener("click", function() {
-        currentMonth++;
-        if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
+        if (currentMonth < 10) {
+            currentMonth++;
+            renderCalendar();
         }
-        renderCalendar();
     });
+
     renderCalendar();
 }
 
