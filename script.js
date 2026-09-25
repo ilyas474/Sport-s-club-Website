@@ -287,19 +287,21 @@ function renderUpcomingEvents() {
 }
 
 if (prevButton && nextButton && monthTitle && calendarGrid) {
-    prevButton.addEventListener("click", function() {
 
-        currentMonth--;
-        renderCalendar();
-    }
+    prevButton.addEventListener("click", function() {
+        if (currentMonth > 8) {
+            currentMonth--;
+            renderCalendar();
+        }
     });
 
     nextButton.addEventListener("click", function() {
-    if (currentMonth < 10) {
-        currentMonth++;
-        renderCalendar();
-    }
+        if (currentMonth < 10) {
+            currentMonth++;
+            renderCalendar();
+        }
     });
+
     renderCalendar();
 }
 
