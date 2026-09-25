@@ -331,29 +331,27 @@ const imageZoom = document.querySelector(".imageZoom");
 const xButton = document.querySelector(".xButton");
 const zoom = document.querySelectorAll(".zoom");
 
-zoom.forEach(function(image) {
-    image.addEventListener("click", function() {
-        imageZoom.src = image.src;
-        imageZoom.alt = image.alt;
-        zoomContainer.style.display = "flex";
-        document.body.style.overflow = "hidden";
+if (zoomContainer && imageZoom && xButton) {
+    zoom.forEach(function(image) {
+        image.addEventListener("click", function() {
+            imageZoom.src = image.src;
+            imageZoom.alt = image.alt;
+            zoomContainer.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
     });
-});
 
-if(xButton){
-xButton.addEventListener("click", function() {
-    zoomContainer.style.display = "none";
-    document.body.style.overflow = "";
-});
-}
-
-if(zoomContainer){
-zoomContainer.addEventListener("click", function(event) {
-    if (event.target === modal) {
+    xButton.addEventListener("click", function() {
         zoomContainer.style.display = "none";
         document.body.style.overflow = "";
-    }
-});
+    });
+
+    zoomContainer.addEventListener("click", function(event) {
+        if (event.target === zoomContainer) {
+            zoomContainer.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    });
 }
 
 const phoneInput = document.getElementById("Phone_Contact");
@@ -402,49 +400,51 @@ document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const galleryItems = document.querySelectorAll(".gallery-item");
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            document.querySelector(".filter-btn.active").classList.remove("active");
-            button.classList.add("active");
-
-            const target = button.getAttribute("data-target");
-            galleryItems.forEach(item => {
-                if (target === "all") {
-                    item.style.display = "block";
-                } else {
-                    if (item.classList.contains(target)) {
-                        item.style.display = "block";
-                    } else {
-                        item.style.display = "none";
-                    }
-                }
-            });
-        });
-    });
-/*放大*/
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxCaption = document.getElementById("lightbox-caption");
     const closeBtn = document.querySelector(".lightbox-close");
 
-    galleryItems.forEach(item => {
-        const img = item.querySelector("img");
-        if (img) {
-            img.addEventListener("click", () => {
-                lightbox.style.display = "flex";
-                lightboxImg.src = img.src;
-                lightboxCaption.textContent = img.alt;
+    if (filterButtons.length > 0 && galleryItems.length > 0 && lightbox && lightboxImg && lightboxCaption && closeBtn) {
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelector(".filter-btn.active").classList.remove("active");
+                button.classList.add("active");
+
+                const target = button.getAttribute("data-target");
+                galleryItems.forEach(item => {
+                    if (target === "all") {
+                        item.style.display = "block";
+                    } else {
+                        if (item.classList.contains(target)) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    }
+                });
             });
-        }
-    });
+        });
 
-    closeBtn.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
+        galleryItems.forEach(item => {
+            const img = item.querySelector("img");
+            if (img) {
+                img.addEventListener("click", () => {
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = img.alt;
+                });
+            }
+        });
 
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) {
+        closeBtn.addEventListener("click", () => {
             lightbox.style.display = "none";
-        }
-    });
+        });
+
+        lightbox.addEventListener("click", (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = "none";
+            }
+        });
+    }
 });
