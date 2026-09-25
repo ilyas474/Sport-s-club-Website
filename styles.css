@@ -1,3 +1,4 @@
+/* Template*/
 b, p, h1, h2, h3, ul, li{
     color:white;
 }
@@ -8,14 +9,107 @@ p {
 }
 
 #logo {
-    margin-bottom:-30px;
+    margin-bottom:-10px;
+    width:100px;
+    height:100px;
 }
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Header */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px 0;
+    padding: 10px 30px;
+    margin:-30px;
+}
+
+.header table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header td {
+    padding: 10px;
+    width: 60%;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Navigation bar */
+nav{
+    text-align:center;
+}
+
+nav a:hover {
+    color:red;
+}
+
+nav a:hover::after{
+    width:70%
+}
+
+nav a.active{
+    color:red;
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:red;
+    font-weight:500;
+    font-size:0.5rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0;
+    padding:18px 14px;
+    position:relative;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:3px;
+    background:red;
+    border-radius:3px 3px 0 0;
+    transition: width 0.25s ease;
+}
+
+.NavigationBar a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+/*About Us Page*/
+.header h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio {
+    margin: 0;
 }
 
 .about-cards {
@@ -156,17 +250,7 @@ p {
     background-color: #e91e63;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
-    background-size: cover;   
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
+/* Footer */
 .site-footer {
     width: auto;
     background-color:#5F0000;
@@ -293,6 +377,7 @@ summary{
     color:white;
 }
 
+/* FAQ page */
 .faq-title{
     color:yellow;
     text-decoration: underline;
@@ -331,20 +416,7 @@ summary{
     line-height: 1.6;
 }
 
-.header table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.header td {
-    padding: 10px;
-    width: 60%;
-}
-
-.header img {
-    width: 80px;
-    height: 80px;
-}
+/* Registration Page */
 
 #Registration form label {
     display: block;
@@ -437,6 +509,7 @@ button:hover {
     margin: 0 auto;
 }
 
+/* Enquiry Page */
 .enquiry-container {
     width:600px;
     margin: 0 auto;
@@ -511,6 +584,7 @@ button:hover {
     margin-top:20px;
 }
 
+/* News and Media Page */
 .news-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -564,15 +638,6 @@ button:hover {
     margin-top: 15px;
 }
 
-@media (max-width: 768px) {
-    .news-card {
-        flex-direction: column;
-    }
-    .news-card img, .card-content {
-        width: 100%;
-    }
-}
-
 .card-content {
     padding: 15px;
     display: flex;
@@ -597,58 +662,6 @@ button:hover {
     margin-left:155px;
     font-size:20px;
     text-decoration:underline;
-}
-
-.NavigationBar a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
-}
-
-nav{
-    text-align:center;
-}
-
-nav a:hover {
-    color:red;
-}
-
-nav a:hover::after{
-    width:70%
-}
-
-nav a.active{
-    color:red;
-}
-
-nav a{
-    display:inline-block;
-    text-decoration:none;
-    color:red;
-    font-weight:500;
-    font-size:0.5rem;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    margin:0;
-    padding:18px 14px;
-    position:relative;
-    transition: color 0.25s ease;
-}
-
-nav a::after {
-    content:'';
-    position: absolute;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-    width:0;
-    height:3px;
-    background:red;
-    border-radius:3px 3px 0 0;
-    transition: width 0.25s ease;
 }
 
 .dropdown {
@@ -695,6 +708,7 @@ nav a::after {
     display: block;
 }
 
+/* Sponsors and partners page */
 .partners {
     background-color: transparent;
     color: white;
@@ -771,6 +785,7 @@ nav a::after {
     color: #ffd54f;
 }
 
+/* Tournaments */
 .recent-tournaments {
     max-width: 1300px;
     margin: 0 auto;
@@ -825,6 +840,12 @@ nav a::after {
 .Welcome h1 {
     text-align: center;
     text-decoration: underline;
+    color: crimson;
+}
+
+.Welcome b {
+    text-align: center;
+    color: crimson;
 }
 
 .Box1 {
@@ -851,6 +872,11 @@ nav a::after {
     border-radius: 20px;
     height: 350px;
     max-width: 550px;
+    border: 1px solid #1B4332;
+}
+
+.Box1Image:hover {
+    border-color: #54d6a0;
 }
 
 .Box1Image img {
@@ -907,7 +933,7 @@ nav a::after {
 }
 
 .SiteList .CardItem .CardLink:hover {
-    border-color: black;
+    border-color: #54d6a0;
 }
 
 .SiteList .CardLink .cardImage {
@@ -929,6 +955,39 @@ nav a::after {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    border: 1px solid #1B4332;
+}
+
+.HomeCard:hover {
+    border-color: #54d6a0;
+}
+
+.VideoCard {
+    width: 300px;
+    height: 300px;
+    color: white;
+    background: #1B4332;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 1px solid #1B4332;
+}
+
+.VideoCard:hover {
+    border-color: #54d6a0;
+}
+
+video {
+    border: 1px solid #1B4332;
+    display: flex;
+    align-items: center;
+}
+
+video:hover {
+    border-color: #54d6a0;
 }
 
 .CardTitle {
@@ -947,19 +1006,27 @@ nav a::after {
     text-align: center;
 }
 
-.shopContainer p {
+.shopText p {
+    display: inline-block;
     padding: 0;
     margin-top: 0;
+    font-style: italic;
+    color: gold;
+    border-bottom: 3px solid gold;
 }
 
-.shopContainer h1 {
+.shopText h1 {
+    display: inline-block;
     padding: 0;
     margin-bottom: 0;
+    margin-top: 0;
+    color: crimson;
+    border-bottom: 3px solid crimson;
 }
 
 .shopButton button {
     border-radius: 20px;
-    border: solid #ffffff;
+    border: 2px solid #ffffff;
     background-color: #1B4332;
 }
 
@@ -970,7 +1037,7 @@ nav a::after {
 
 .shopButton button:hover {
     background-color: rgb(32, 123, 14);
-    border: solid black;
+    border: 2px solid #54d6a0;
 }
 
 .productLayout {
@@ -986,8 +1053,13 @@ nav a::after {
     background-color: #1B4332;
     padding: 30px;
     margin: 0;
-    border-radius: 12px;
+    border-radius: 12%;
     overflow: hidden;
+    border: 1px solid #1B4332;
+}
+
+.productCard:hover {
+    border-color: #54d6a0;
 }
 
 .productCard p {
@@ -1002,11 +1074,22 @@ nav a::after {
     width: 100%;
     max-width: 400px;
     height: 270px;
-    border-radius: 12px;
+    border-radius: 8%;
 }
 
-.Audio {
-    background: transparent;
+.attribution p {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.howtoplayTitle {
+    text-align: center;
+}
+
+.howtoplayTitle h2 {
+    color: crimson;
+    border-bottom: 2px solid crimson;
+    display: inline-block;
 }
 
 .chua-nav-bar a {
@@ -1299,42 +1382,6 @@ nav a::after {
     color: white;
 }
 
-@media (max-width: 768px) {
-    .calendar-section,
-    .event-details,
-    .upcoming-events {
-        width: 95%;
-        padding: 15px;
-    }
-
-    #month-title {
-        font-size: 24px;
-    }
-
-    .calendar-header button {
-        min-width: 80px;
-        height: 38px;
-        font-size: 13px;
-        padding: 0 10px;
-    }
-
-    .day-name {
-        padding: 8px 3px;
-        font-size: 12px;
-    }
-
-    .calendar-day {
-        min-height: 80px;
-        padding: 5px;
-        font-size: 12px;
-    }
-
-    .calendar-event {
-        font-size: 10px;
-        padding: 4px;
-    }
-}
-
 .upcoming-event-item {
     background-color: #202020;
     padding: 15px 20px;
@@ -1442,4 +1489,134 @@ nav a::after {
 
 #event-description.tournament-event {
     border-left-color: #8B0000;
+}
+
+.productCard img.zoom {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.productCard img.zoom:hover {
+    transform: scale(1.03);
+}
+
+.zoomContainer {
+    display: none;
+    position: fixed;
+    z-index: 69420;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 30px;
+}
+
+.imageZoom {
+    display: block;
+    max-width: 60%;
+    max-height: 65%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    animation: zoomIn 0.3s ease;
+}
+
+.xButton {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.xButton:hover {
+    color: #54d6a0;
+}
+
+.membersPage {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.membersPage h2 {
+    font-size: 38px;
+    color: crimson;
+    border-bottom: 3px solid crimson;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.membersText {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: gold;
+}
+
+.memberContainer {
+    margin-bottom: 60px;
+}
+
+.memberContainer h3 {
+    color: crimson;
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-bottom: 3px solid crimson;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.memberLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.memberCard {
+    background-color: #102d35;
+    border: 1px solid #24534c;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.memberCard:hover {
+    border-color: #54d6a0;
+}
+
+.clubCommittee {
+    color: #54d6a0;
+    font-weight: bold;
+}
+
+.memberImage {
+    width: 100%;
+    height: 260px;
+    background-color: #183f45;
+    object-fit: cover;
+    display: block;
+}
+
+.memberInfo {
+    padding: 20px 15px;
+}
+
+.memberInfo h4 {
+    font-size: 20px;
+    color: white;
+    margin: 0 0 8px;
+}
+
+.memberInfo p {
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.5;
+    color: #54d6a0;
 }
