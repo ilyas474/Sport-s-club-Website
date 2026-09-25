@@ -25,6 +25,11 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0;
+}
+
+.audio {
+    margin: 0;
 }
 
 .about-cards {
@@ -995,6 +1000,7 @@ video:hover {
     display: inline-block;
     padding: 0;
     margin-top: 0;
+    font-style: italic;
     color: gold;
     border-bottom: 3px solid gold;
 }
@@ -1004,13 +1010,13 @@ video:hover {
     padding: 0;
     margin-bottom: 0;
     margin-top: 0;
-    color: gold;
-    border-bottom: 3px solid gold;
+    color: crimson;
+    border-bottom: 3px solid crimson;
 }
 
 .shopButton button {
     border-radius: 20px;
-    border: solid #ffffff;
+    border: 2px solid #ffffff;
     background-color: #1B4332;
 }
 
@@ -1021,7 +1027,7 @@ video:hover {
 
 .shopButton button:hover {
     background-color: rgb(32, 123, 14);
-    border: solid black;
+    border: 2px solid #54d6a0;
 }
 
 .productLayout {
@@ -1064,6 +1070,16 @@ video:hover {
 .attribution p {
     font-size: 14px;
     font-style: italic;
+}
+
+.howtoplayTitle {
+    text-align: center;
+}
+
+.howtoplayTitle h2 {
+    color: crimson;
+    border-bottom: 2px solid crimson;
+    display: inline-block;
 }
 
 .chua-nav-bar a {
