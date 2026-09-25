@@ -18,7 +18,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    margin-bottom:-30px;
+    margin:-30px;
 }
 
 .header h1 {
