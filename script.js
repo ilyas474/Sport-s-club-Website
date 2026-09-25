@@ -1,4 +1,4 @@
-
+/* About Us Page */
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -8,12 +8,14 @@ function scrollCoreValues(direction) {
     });
 }
 
+/* Enquiry Page */
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
     window.location.href="Submit-Enquiry.html";
 }
 
+/* News Page Search Bar */
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");
@@ -42,6 +44,7 @@ function searchNews() {
     }
 }
 
+/* Home Page Swiper Element */
 if (typeof Swiper !== "undefined") {
     new Swiper('.Panel', {
         loop: true,
@@ -55,6 +58,7 @@ if (typeof Swiper !== "undefined") {
     });
 }
 
+/* Calendar & Upcoming Events Page*/
 function changeContent(cardId) {
     const textView = document.getElementById(cardId + '-text');
     const photoView = document.getElementById(cardId + '-photo');
@@ -326,6 +330,7 @@ if (allButton) {
     allButton.classList.add("active");
 }
 
+/* Merchandise Page Image Zoom Function */ 
 const zoomContainer = document.querySelector(".zoomContainer");
 const imageZoom = document.querySelector(".imageZoom");
 const xButton = document.querySelector(".xButton");
@@ -354,6 +359,7 @@ if (zoomContainer && imageZoom && xButton) {
     });
 }
 
+/* Registration Form Autofill */
 const phoneInput = document.getElementById("Phone_Contact");
 
 if (phoneInput) {
@@ -396,6 +402,7 @@ if (studentIdInput) {
     });
 }
 
+/* Gallery Page Image Zoom Function */
 document.addEventListener("DOMContentLoaded", function() {
     const filterButtons = document.querySelectorAll(".filter-btn");
     const galleryItems = document.querySelectorAll(".gallery-item");
