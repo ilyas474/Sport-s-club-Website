@@ -1,3 +1,4 @@
+/* Template*/
 b, p, h1, h2, h3, ul, li{
     color:white;
 }
@@ -13,6 +14,7 @@ p {
     height:100px;
 }
 
+/* Header */
 .header {
     display: flex;
     align-items: center;
@@ -21,6 +23,77 @@ p {
     margin-bottom:-30px;
 }
 
+.header table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header td {
+    padding: 10px;
+    width: 60%;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+}
+
+/* Navigation bar */
+nav{
+    text-align:center;
+}
+
+nav a:hover {
+    color:red;
+}
+
+nav a:hover::after{
+    width:70%
+}
+
+nav a.active{
+    color:red;
+}
+
+nav a{
+    display:inline-block;
+    text-decoration:none;
+    color:red;
+    font-weight:500;
+    font-size:0.5rem;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    margin:0;
+    padding:18px 14px;
+    position:relative;
+    transition: color 0.25s ease;
+}
+
+nav a::after {
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:0;
+    height:3px;
+    background:red;
+    border-radius:3px 3px 0 0;
+    transition: width 0.25s ease;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
+    background-size: cover;   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*About Us Page*/
 .header h1 {
     display: flex;
     align-items: center;
@@ -165,17 +238,7 @@ p {
     background-color: #e91e63;
 }
 
-body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("Images/frisbee\ background.jpg");
-    background-size: cover;   
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
+/* Footer */
 .site-footer {
     width: auto;
     background-color:#5F0000;
@@ -302,6 +365,7 @@ summary{
     color:white;
 }
 
+/* FAQ page */
 .faq-title{
     color:yellow;
     text-decoration: underline;
@@ -340,20 +404,7 @@ summary{
     line-height: 1.6;
 }
 
-.header table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.header td {
-    padding: 10px;
-    width: 60%;
-}
-
-.header img {
-    width: 80px;
-    height: 80px;
-}
+/* Registration Page */
 
 #Registration form label {
     display: block;
@@ -446,6 +497,7 @@ button:hover {
     margin: 0 auto;
 }
 
+/* Enquiry Page */
 .enquiry-container {
     width:600px;
     margin: 0 auto;
@@ -520,6 +572,7 @@ button:hover {
     margin-top:20px;
 }
 
+/* News and Media Page */
 .news-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -604,51 +657,7 @@ button:hover {
     color: white;
     font-size: 18px;
     padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    
-}
-
-nav{
-    text-align:center;
-}
-
-nav a:hover {
-    color:red;
-}
-
-nav a:hover::after{
-    width:70%
-}
-
-nav a.active{
-    color:red;
-}
-
-nav a{
-    display:inline-block;
-    text-decoration:none;
-    color:red;
-    font-weight:500;
-    font-size:0.5rem;
-    letter-spacing:0.04em;
-    text-transform:uppercase;
-    margin:0;
-    padding:18px 14px;
-    position:relative;
-    transition: color 0.25s ease;
-}
-
-nav a::after {
-    content:'';
-    position: absolute;
-    bottom:0;
-    left:50%;
-    transform:translateX(-50%);
-    width:0;
-    height:3px;
-    background:red;
-    border-radius:3px 3px 0 0;
-    transition: width 0.25s ease;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .dropdown {
@@ -695,6 +704,7 @@ nav a::after {
     display: block;
 }
 
+/* Sponsors and partners page */
 .partners {
     background-color: transparent;
     color: white;
@@ -771,6 +781,7 @@ nav a::after {
     color: #ffd54f;
 }
 
+/* Tournaments */
 .recent-tournaments {
     max-width: 1300px;
     margin: 0 auto;
