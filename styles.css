@@ -8,7 +8,9 @@ p {
 }
 
 #logo {
-    margin-bottom:-30px;
+    margin-bottom:-10px;
+    width:100px;
+    height:100px;
 }
 
 .header {
@@ -16,6 +18,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+    margin-bottom:-30px;
 }
 
 .header h1 {
