@@ -1,3 +1,4 @@
+/* About Page Gallery Scroll Button - Ilyas bin Ahmad Ezrin TP182548 */
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -7,12 +8,14 @@ function scrollCoreValues(direction) {
     });
 }
 
+/* Submit Enquiry function - Ilyas bin Ahmad Ezrin TP182548 */
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
     window.location.href="Submit-Enquiry.html";
 }
 
+/* Search news function - Ilyas bin Ahmad Ezrin TP182548 */
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");

@@ -25,6 +25,10 @@ body {
     width: 100%;
 }
 
+.audio {
+    margin: 0;
+}
+
 /* Header */
 .header {
     display: flex;
@@ -101,15 +105,11 @@ nav a::after {
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/*About Us Page*/
+/* About Us Page - Ilyas bin Ahmad Ezrin TP182548 */
 .header h1 {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: 0;
-}
-
-.audio {
     margin: 0;
 }
 
@@ -378,7 +378,7 @@ summary{
     color:white;
 }
 
-/* FAQ page */
+/* FAQ page - Ilyas bin Ahmad Ezrin TP182548 */
 .faq-title{
     color:yellow;
     text-decoration: underline;
@@ -510,7 +510,7 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Enquiry Page */
+/* Enquiry Page - Ilyas bin Ahmad Ezrin TP182548 */
 .enquiry-container {
     width:600px;
     margin: 0 auto;
@@ -585,7 +585,7 @@ button:hover {
     margin-top:20px;
 }
 
-/* News and Media Page */
+/* News and Media Page - Ilyas bin Ahmad Ezrin TP182548 */
 .news-container {
     max-width: 1200px;
     margin: 40px auto;
