@@ -8,6 +8,7 @@ function scrollCoreValues(direction) {
     });
 }
 
+// Notification for submitted enquiry - Ilyas bin Ahmad Ezrin TP182548
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
