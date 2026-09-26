@@ -1,4 +1,3 @@
-/* About Us Page */
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -8,14 +7,12 @@ function scrollCoreValues(direction) {
     });
 }
 
-/* Enquiry Page */
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
     window.location.href="Submit-Enquiry.html";
 }
 
-/* News Page Search Bar */
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");

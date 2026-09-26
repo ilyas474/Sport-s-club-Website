@@ -28,13 +28,18 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+.audio {
+    margin: 0;
+}
+
 /* Header */
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    margin:-30px;
+    margin-top:-10px;
+    margin-bottom:-20px;
 }
 
 .header table {
@@ -108,11 +113,12 @@ nav a::after {
     transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
-/*About Us Page*/
+/* About Us Page - Ilyas bin Ahmad Ezrin TP182548 */
 .header h1 {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin: 0;
 }
 
 .about-cards {
@@ -380,7 +386,7 @@ summary{
     color:white;
 }
 
-/* FAQ page */
+/* FAQ page - Ilyas bin Ahmad Ezrin TP182548 */
 .faq-title{
     color:yellow;
     text-decoration: underline;
@@ -512,7 +518,7 @@ button:hover {
     margin: 0 auto;
 }
 
-/* Enquiry Page */
+/* Enquiry Page - Ilyas bin Ahmad Ezrin TP182548 */
 .enquiry-container {
     width:600px;
     margin: 0 auto;
@@ -587,7 +593,7 @@ button:hover {
     margin-top:20px;
 }
 
-/* News and Media Page */
+/* News and Media Page - Ilyas bin Ahmad Ezrin TP182548 */
 .news-container {
     max-width: 1200px;
     margin: 40px auto;
@@ -710,7 +716,7 @@ button:hover {
     display: block;
 }
 
-/* Sponsors and partners page */
+/* Sponsors and Partners Page */
 .partners {
     background-color: transparent;
     color: white;
@@ -787,7 +793,7 @@ button:hover {
     color: #ffd54f;
 }
 
-/* Tournaments */
+/* Tournaments Page */
 .recent-tournaments {
     max-width: 1300px;
     margin: 0 auto;
@@ -1372,7 +1378,7 @@ video:hover {
 .chua-hidden {
     display: none !important;
 }
-
+/* Calendar and Events */
 #calendar-page-title {
     width: 100%;
     margin: 30px 0 25px 0;
