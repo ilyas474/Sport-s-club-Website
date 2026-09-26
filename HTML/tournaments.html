@@ -6,6 +6,7 @@
     <title>Tournaments</title>
     <link rel="icon" href="../Images/club_logo.png">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../script.js" defer></script>
 </head>
 <body>
     <header>
@@ -141,36 +142,5 @@
             </div>
         </div>
     </footer>
-
-<script>
-    function showRecent() {
-        document.getElementById("tournament-frame").src =
-            "https://results.wfdf.sport/wucc-2026/games";
-
-        document.getElementById("tournament-title").textContent =
-            "WUCC 2026 Results";
-
-        document.getElementById("tournament-description").textContent =
-            "Games, scores, and standings from WFDF";
-
-        document.getElementById("tournament-link").href =
-            "https://results.wfdf.sport/wucc-2026/games";
-    }
-
-    function showUpcoming() {
-        document.getElementById("tournament-frame").src =
-            "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
-
-        document.getElementById("tournament-title").textContent =
-            "Upcoming: 2026 USA Ultimate Club Nationals";
-
-        document.getElementById("tournament-description").textContent =
-            "October 22–25, 2026 in San Diego, California";
-
-        document.getElementById("tournament-link").href =
-            "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
-    }
-</script>
-
 </body>
 </html>
