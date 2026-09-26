@@ -114,10 +114,7 @@ nav a::after {
     display: flex;
     align-items: center;
     gap: 10px;
-<<<<<<< HEAD
     margin: 0;
-=======
->>>>>>> 3f9ae170514b7535ab2eeddacd2327c11e0c67c5
 }
 
 .about-cards {
