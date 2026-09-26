@@ -1,4 +1,3 @@
-/* About Page Gallery Scroll Button - Ilyas bin Ahmad Ezrin TP182548 */
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -8,14 +7,12 @@ function scrollCoreValues(direction) {
     });
 }
 
-/* Submit Enquiry function - Ilyas bin Ahmad Ezrin TP182548 */
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
     window.location.href="Submit-Enquiry.html";
 }
 
-/* Search news function - Ilyas bin Ahmad Ezrin TP182548 */
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");
@@ -44,6 +41,7 @@ function searchNews() {
     }
 }
 
+/* Home Page Swiper Element */
 if (typeof Swiper !== "undefined") {
     new Swiper('.Panel', {
         loop: true,
@@ -57,6 +55,7 @@ if (typeof Swiper !== "undefined") {
     });
 }
 
+/* Calendar & Upcoming Events Page*/
 function changeContent(cardId) {
     const textView = document.getElementById(cardId + '-text');
     const photoView = document.getElementById(cardId + '-photo');
@@ -109,8 +108,8 @@ const events = [
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Casual friendly match for members to practise teamwork, positioning and match play."
+        location: "Volleyball Court",
+        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
     },
     {
         day: 17,
@@ -134,24 +133,14 @@ const events = [
         description: "Regular training session covering basic skills, fitness drills and team practice."
     },
     {
-        day: 8,
-        month: 9,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Training session focused on passing accuracy, catching under pressure and movement into space."
-    },
-    {
         day: 15,
         month: 9,
         year: 2026,
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
+        location: "Volleyball Court",
+        description: "Friendly match session for members to practise teamwork and match play."
     },
     {
         day: 22,
@@ -160,8 +149,8 @@ const events = [
         title: "Frisbee Training",
         type: "training-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Weekly club training with warm-up drills, skill practice and short games."
+        location: "APU Futsal Court",
+        description: "Weekly club training with drills, skill practice and short games."
     },
 
     {
@@ -181,18 +170,8 @@ const events = [
         title: "Friendly Match",
         type: "friendly-event",
         time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
-    },
-    {
-        day: 19,
-        month: 10,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Regular training session with throwing drills, catching practice and team scrimmages."
+        location: "Volleyball Court",
+        description: "Friendly match between club members, with selected sessions involving IMU students."
     },
     {
         day: 28,
@@ -203,47 +182,6 @@ const events = [
         time: "9:00 AM - 5:00 PM",
         location: "APU Futsal Court",
         description: "Competitive club tournament with scheduled matches and team-based competition."
-    },
-
-    {
-        day: 3,
-        month: 11,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Weekly training session focused on core frisbee skills and match preparation."
-    },
-    {
-        day: 10,
-        month: 11,
-        year: 2026,
-        title: "Frisbee Training",
-        type: "training-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Futsal Court",
-        description: "Regular practice session with drills followed by short competitive games."
-    },
-    {
-        day: 17,
-        month: 11,
-        year: 2026,
-        title: "Friendly Match",
-        type: "friendly-event",
-        time: "5:00 PM - 8:00 PM",
-        location: "APU Volleyball Court",
-        description: "Friendly match between APU Frisbee Club members, with occasional matches against IMU students."
-    },
-    {
-        day: 20,
-        month: 11,
-        year: 2026,
-        title: "Year-End Tournament",
-        type: "tournament-event",
-        time: "9:00 AM - 5:00 PM",
-        location: "APU Futsal Court",
-        description: "Year-end club tournament bringing members together for a full day of team matches."
     }
 ];
 
@@ -350,23 +288,21 @@ function renderUpcomingEvents() {
 }
 
 if (prevButton && nextButton && monthTitle && calendarGrid) {
+
     prevButton.addEventListener("click", function() {
-        currentMonth--;
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
+        if (currentMonth > 8) {
+            currentMonth--;
+            renderCalendar();
         }
-        renderCalendar();
     });
 
     nextButton.addEventListener("click", function() {
-        currentMonth++;
-        if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
+        if (currentMonth < 10) {
+            currentMonth++;
+            renderCalendar();
         }
-        renderCalendar();
     });
+
     renderCalendar();
 }
 
@@ -391,32 +327,36 @@ if (allButton) {
     allButton.classList.add("active");
 }
 
+/* Merchandise Page Image Zoom Function */ 
 const zoomContainer = document.querySelector(".zoomContainer");
 const imageZoom = document.querySelector(".imageZoom");
 const xButton = document.querySelector(".xButton");
 const zoom = document.querySelectorAll(".zoom");
 
-zoom.forEach(function(image) {
-    image.addEventListener("click", function() {
-        imageZoom.src = image.src;
-        imageZoom.alt = image.alt;
-        zoomContainer.style.display = "flex";
-        document.body.style.overflow = "hidden";
+if (zoomContainer && imageZoom && xButton) {
+    zoom.forEach(function(image) {
+        image.addEventListener("click", function() {
+            imageZoom.src = image.src;
+            imageZoom.alt = image.alt;
+            zoomContainer.style.display = "flex";
+            document.body.style.overflow = "hidden";
+        });
     });
-});
 
-xButton.addEventListener("click", function() {
-    zoomContainer.style.display = "none";
-    document.body.style.overflow = "";
-});
-
-zoomContainer.addEventListener("click", function(event) {
-    if (event.target === modal) {
+    xButton.addEventListener("click", function() {
         zoomContainer.style.display = "none";
         document.body.style.overflow = "";
-    }
-});
+    });
 
+    zoomContainer.addEventListener("click", function(event) {
+        if (event.target === zoomContainer) {
+            zoomContainer.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    });
+}
+
+/* Registration Form Autofill */
 const phoneInput = document.getElementById("Phone_Contact");
 
 if (phoneInput) {
@@ -458,3 +398,84 @@ if (studentIdInput) {
         studentIdInput.value = "TP" + digits;
     });
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const galleryItems = document.querySelectorAll(".gallery-item");
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const lightboxCaption = document.getElementById("lightbox-caption");
+    const closeBtn = document.querySelector(".lightbox-close");
+
+    if (filterButtons.length > 0 && galleryItems.length > 0 && lightbox && lightboxImg && lightboxCaption && closeBtn) {
+        filterButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                document.querySelector(".filter-btn.active").classList.remove("active");
+                button.classList.add("active");
+
+                const target = button.getAttribute("data-target");
+                galleryItems.forEach(item => {
+                    if (target === "all") {
+                        item.style.display = "block";
+                    } else {
+                        if (item.classList.contains(target)) {
+                            item.style.display = "block";
+                        } else {
+                            item.style.display = "none";
+                        }
+                    }
+                });
+            });
+        });
+
+        galleryItems.forEach(item => {
+            const img = item.querySelector("img");
+            if (img) {
+                img.addEventListener("click", () => {
+                    lightbox.style.display = "flex";
+                    lightboxImg.src = img.src;
+                    lightboxCaption.textContent = img.alt;
+                });
+            }
+        });
+
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
+    });
+
+    }
+});
+
+/*rules*/
+document.addEventListener("DOMContentLoaded", function() {
+    const accHeaders = document.querySelectorAll(".accordion-header");
+
+    if (accHeaders.length > 0) {
+        accHeaders.forEach(header => {
+            header.addEventListener("click", function() {
+               
+                const content = this.nextElementSibling;
+                const isActive = this.classList.contains("active");
+                accHeaders.forEach(otherHeader => {
+                    otherHeader.classList.remove("active");
+                    otherHeader.nextElementSibling.style.maxHeight = null;
+                    otherHeader.nextElementSibling.style.paddingTop = "0";
+                    otherHeader.nextElementSibling.style.paddingBottom = "0";
+                });
+
+              
+                if (!isActive) {
+                    this.classList.add("active");
+                    content.style.maxHeight = content.scrollHeight + "px"; 
+                }
+            });
+        });
+    }
+});
