@@ -1,3 +1,4 @@
+// About Page Scrolling Button for images - Ilyas bin Ahmad Ezrin TP182548 
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -13,6 +14,7 @@ function submitForm(event) {
     window.location.href="Submit-Enquiry.html";
 }
 
+// Search feature in News and Media page - Ilyas bin Ahmad Ezrin TP182548
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");
