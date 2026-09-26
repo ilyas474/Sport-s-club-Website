@@ -1,11 +1,13 @@
 /* Template*/
 b, p, h1, h2, h3, ul, li{
     color:white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 p {
     font-size: 18px;
     line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #logo {
@@ -23,6 +25,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 /* Header */
@@ -1629,7 +1632,6 @@ video:hover {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
-    font-family: Arial, sans-serif;
 }
 
 .gallery-title {
