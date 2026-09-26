@@ -675,7 +675,6 @@ button:hover {
 .dropdown-trigger {
     text-decoration: none;
     color: #ffffff; 
-    font-family: inherit;
     padding: 10px 15px;
     cursor: pointer;
     display: inline-block;
@@ -1247,7 +1246,6 @@ video:hover {
     max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
-    font-family: Arial, sans-serif;
     color: white;
 }
 .chua-title {
@@ -1766,7 +1764,6 @@ video:hover {
     max-width: 1200px;
     margin: 30px auto;
     padding: 0 20px;
-    font-family: Arial, sans-serif;
 }
 
 .gallery-title {
@@ -1902,7 +1899,6 @@ video:hover {
     max-width: 900px;
     margin: 40px auto;
     padding: 0 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .rules-header {
