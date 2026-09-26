@@ -708,7 +708,7 @@ button:hover {
     display: block;
 }
 
-/* Sponsors and partners page */
+/* Sponsors and Partners Page */
 .partners {
     background-color: transparent;
     color: white;
@@ -785,7 +785,7 @@ button:hover {
     color: #ffd54f;
 }
 
-/* Tournaments */
+/* Tournaments Page */
 .recent-tournaments {
     max-width: 1300px;
     margin: 0 auto;
@@ -1372,7 +1372,7 @@ video:hover {
 .chua-hidden {
     display: none !important;
 }
-
+/* Calendar and Events */
 #calendar-page-title {
     width: 100%;
     margin: 30px 0 25px 0;
