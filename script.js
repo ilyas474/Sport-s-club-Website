@@ -44,7 +44,7 @@ function searchNews() {
     }
 }
 
-/* Home Page Swiper Element */
+/* Home Page Swiper Element - Jericho Joel Jansen TP178478 */
 if (typeof Swiper !== "undefined") {
     new Swiper('.Panel', {
         loop: true,
@@ -330,7 +330,7 @@ if (allButton) {
     allButton.classList.add("active");
 }
 
-/* Merchandise Page Image Zoom Function */ 
+/* Merchandise Page Image Zoom Function - Jericho Joel Jansen TP178478 */ 
 const zoomContainer = document.querySelector(".zoomContainer");
 const imageZoom = document.querySelector(".imageZoom");
 const xButton = document.querySelector(".xButton");

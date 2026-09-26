@@ -844,7 +844,7 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Home Page */
+/* Home Page Jericho Joel Jansen TP178478 */
 .Welcome h1 {
     text-align: center;
     text-decoration: underline;
@@ -927,7 +927,7 @@ button:hover {
     border-color: #54d6a0;
 }
 
-/* Green cards for Home Page, and How To Play */
+/* Green cards for Home Page, and How To Play Jericho Joel Jansen TP178478 */
 .Box1 {
     display: flex;
     flex-direction: row-reverse;
@@ -977,7 +977,7 @@ button:hover {
     margin-top: 0;
 }
 
-/* How to Play html */
+/* How to Play html Jericho Joel Jansen TP178478 */
 .Box1Vid video {
     flex: 0 0 50%;
     border-radius: 20px;
@@ -1023,7 +1023,7 @@ video:hover {
     display: inline-block;
 }
 
-/* Merchandise HTML */
+/* Merchandise HTML Jericho Joel Jansen TP178478 */
 .shopContainer {
     align-items: center;
     text-align: center;
@@ -1152,7 +1152,7 @@ video:hover {
     font-style: italic;
 }
 
-/* Club Members */
+/* Club Members Jericho Joel Jansen TP178478 */
 .membersPage {
     padding: 50px 8%;
     text-align: center;
