@@ -1,3 +1,4 @@
+// About Page Scrolling Button for images - Ilyas bin Ahmad Ezrin TP182548 
 function scrollCoreValues(direction) {
     const container = document.getElementById("core_values");
 
@@ -7,12 +8,14 @@ function scrollCoreValues(direction) {
     });
 }
 
+// Notification for submitted enquiry - Ilyas bin Ahmad Ezrin TP182548
 function submitForm(event) {
     event.preventDefault();
     alert("Thank you for your enquiry!");
     window.location.href="Submit-Enquiry.html";
 }
 
+// Search feature in News and Media page - Ilyas bin Ahmad Ezrin TP182548
 function searchNews() {
     let searchText = document.getElementById("searchBar").value.trim();
     let newsCards = document.querySelectorAll(".news-card");
@@ -479,3 +482,32 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/* Tournament Page */
+function showRecent() {
+    document.getElementById("tournament-frame").src =
+        "https://results.wfdf.sport/wucc-2026/games";
+
+    document.getElementById("tournament-title").textContent =
+        "WUCC 2026 Results";
+
+    document.getElementById("tournament-description").textContent =
+        "Games, scores, and standings from WFDF";
+
+    document.getElementById("tournament-link").href =
+        "https://results.wfdf.sport/wucc-2026/games";
+}
+
+function showUpcoming() {
+    document.getElementById("tournament-frame").src =
+        "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
+
+    document.getElementById("tournament-title").textContent =
+        "Upcoming: 2026 USA Ultimate Club Nationals";
+
+    document.getElementById("tournament-description").textContent =
+        "October 22–25, 2026 in San Diego, California";
+
+    document.getElementById("tournament-link").href =
+        "https://play.usaultimate.org/events/2026-USA-Ultimate-Club-Nationals/";
+}
