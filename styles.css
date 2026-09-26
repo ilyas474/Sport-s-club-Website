@@ -848,7 +848,8 @@ button:hover {
 .Welcome h1 {
     text-align: center;
     text-decoration: underline;
-    color: crimson;
+    color:crimson;
+    text-underline-offset: 8px; 
 }
 
 .Welcome b {
