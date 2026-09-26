@@ -1160,19 +1160,18 @@ video:hover {
 
 .membersText {
     font-size: 17px;
-    margin-bottom: 10px;
+    margin: 5px 0 20px;
     color: gold;
-    margin-top: 0;
 }
 
 .memberContainer {
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .memberContainer h3 {
     color: crimson;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin: 15px 0 20px;
     border-bottom: 3px solid crimson;
     display: inline-block;
     padding-bottom: 10px;
@@ -1968,7 +1967,7 @@ video:hover {
 
 .accordion-content {
     background-color: #ffffff;
-    max-height: 0; /* 默认关闭 */
+    max-height: 0;
     overflow: hidden;
     padding: 0 20px;
 }
